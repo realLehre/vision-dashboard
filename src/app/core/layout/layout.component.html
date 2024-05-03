@@ -1,1 +1,20 @@
-<p>layout works!</p>
+<div class="h-full relative text-white">
+  <div
+    class="absolute top-0 left-0 bg-[url('assets/images/bg.png')] bg-no-repeat bg-center h-full w-full bg-cover z-10"
+  ></div>
+  <div class="absolute test h-full w-full top-0 left-0 z-20"></div>
+
+  <div class="relative h-full w-full z-20 backdrop-opacity-95">
+    <mat-drawer-container
+      class="h-full w-screen bg-red-400 drawer-container-main"
+    >
+      <mat-drawer #drawer class="sidenav w-[264px] h-full" mode="side" opened>
+        <app-sidenav></app-sidenav>
+      </mat-drawer>
+
+      <div class="h-full">
+        <app-main-content></app-main-content>
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>
