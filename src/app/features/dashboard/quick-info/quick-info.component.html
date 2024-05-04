@@ -1,1 +1,55 @@
-<p>quick-info works!</p>
+<div class="infos">
+  <div class="flex items-center justify-between info p-4 rounded-[20px]">
+    <div>
+      <div class="text-xs text-type_gray mb-[1px]">Today's Money</div>
+      <div>
+        <span class="text-lg font-bold mr-1">{{ "53000" | currency: "$" }}</span
+        ><span class="text-sm font-bold text-pri_green">+5%</span>
+      </div>
+    </div>
+    <div class="p-2 rounded-xl bg-pri_blue ml-2">
+      <img src="assets/images/icons/wallet.png" alt="" />
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between info p-4 rounded-[20px]">
+    <div>
+      <div class="text-xs text-type_gray mb-[1px]">Today's User</div>
+      <div>
+        <span class="text-lg font-bold mr-1">{{ "2300" | number }}</span
+        ><span class="text-sm font-bold text-pri_green">+53%</span>
+      </div>
+    </div>
+    <div class="p-2 rounded-xl bg-pri_blue ml-2">
+      <img src="assets/images/icons/globe.png" alt="" />
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between info p-4 rounded-[20px]">
+    <div>
+      <div class="text-xs text-type_gray mb-[1px]">New Clients</div>
+      <div>
+        <span class="text-lg font-bold mr-1">{{ "+3052" | number }}</span
+        ><span class="text-sm font-bold text-pri_red">-14%</span>
+      </div>
+    </div>
+    <div class="p-2 rounded-xl bg-pri_blue ml-2">
+      <img src="assets/images/icons/clipboard.png" alt="" />
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between info p-4 rounded-[20px]">
+    <div>
+      <div class="text-xs text-type_gray mb-[1px]">Total Sales</div>
+      <div>
+        <span class="text-lg font-bold mr-1">{{
+          "173000" | currency: "$"
+        }}</span
+        ><span class="text-sm font-bold text-pri_green">+8%</span>
+      </div>
+    </div>
+    <div class="p-2 rounded-xl bg-pri_blue ml-2">
+      <img src="assets/images/icons/sales.png" alt="" />
+    </div>
+  </div>
+</div>
