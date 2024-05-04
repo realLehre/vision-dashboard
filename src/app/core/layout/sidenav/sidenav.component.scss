@@ -4,5 +4,41 @@
     rgba(6, 11, 38, 0.94) 55%,
     rgba(9, 13, 46, 0) 100%
   );
-  //backdrop-filter: blur(20px);
+}
+
+.dashboard-name {
+  background: linear-gradient(58deg, #ffffff 50%, rgba(117, 122, 140, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.line {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 18, 59, 0) 0%,
+    rgba(224, 225, 226, 1) 50%,
+    rgba(9, 13, 46, 0) 100%
+  );
+}
+
+.nav-links {
+  & li {
+    & svg {
+      & path {
+        fill: #0075ff;
+      }
+    }
+  }
+}
+
+.active-route {
+  background-color: theme("colors.bg_gray");
+  & span {
+    background-color: theme("colors.pri_blue");
+  }
+  & svg {
+    & path {
+      fill: #fff !important;
+    }
+  }
 }
