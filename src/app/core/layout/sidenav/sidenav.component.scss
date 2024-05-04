@@ -4,6 +4,7 @@
     rgba(6, 11, 38, 0.94) 55%,
     rgba(9, 13, 46, 0) 100%
   );
+  background-color: red;
 }
 
 .dashboard-name {
@@ -23,22 +24,37 @@
 
 .nav-links {
   & li {
+    height: 54px;
+
+    & span {
+      background-color: theme("colors.bg_gray");
+    }
+
     & svg {
       & path {
         fill: #0075ff;
       }
     }
+
+    &.active-route {
+      background-color: theme("colors.bg_gray");
+      & span {
+        background-color: theme("colors.pri_blue");
+      }
+      & svg {
+        & path {
+          fill: #fff !important;
+        }
+      }
+    }
   }
 }
 
-.active-route {
-  background-color: theme("colors.bg_gray");
-  & span {
-    background-color: theme("colors.pri_blue");
-  }
-  & svg {
-    & path {
-      fill: #fff !important;
-    }
-  }
+.doc-btn {
+  background: rgb(6, 11, 40);
+  background: linear-gradient(
+    238deg,
+    rgba(6, 11, 40, 0.74) 0%,
+    rgba(10, 14, 35, 0.71) 100%
+  );
 }
