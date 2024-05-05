@@ -1,10 +1,35 @@
 <div class="flex items-center justify-between">
   <div
-    class="relative w-[600px] h-[344px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-[20px]"
+    class="relative w-[600px] h-[344px] card rounded-[20px] py-8 px-5 overflow-hidden"
   >
-    <div>
-      <div class="sub_text">Welcome back,</div>
-      <div class="text-[28px] font-bold">Mark Johnson</div>
+    <div class="absolute h-full w-full card_bg top-0 left-0 z-[25]"></div>
+    <div class="flex h-full flex-col justify-between z-30 relative">
+      <div>
+        <div>
+          <div class="sub_text">Welcome back,</div>
+          <div class="text-[28px] font-bold">Mark Johnson</div>
+        </div>
+
+        <div class="sub_text text-base mt-5">
+          <div>Glad to see you again</div>
+          <div>Ask me anything</div>
+        </div>
+      </div>
+
+      <div>
+        <a class="text-xs font-medium inline-block cursor-pointer group"
+          >Tap to record
+          <i
+            class="fa fa-arrow-right text-[10px] ml-[1px] group-hover:translate-x-1 transition duration-300"
+          ></i
+        ></a>
+      </div>
     </div>
+
+    <img
+      src="assets/images/jelly-fish.png"
+      alt=""
+      class="absolute right-0 top-1/2 -translate-y-1/2 z-20 h-full"
+    />
   </div>
 </div>
