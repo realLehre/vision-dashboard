@@ -10,7 +10,8 @@
     <div class="flex flex-col">
       <div
         class="semi-donut margin relative self-center justify-self-center"
-        style="--percentage: 96; --fill: #0075ff"
+        style="--fill: #0075ff"
+        [style.--percentage]="progress"
       >
         <div
           class="p-2 rounded-full bg-pri_blue ml-2 -translate-x-1 -translate-y-5"
@@ -42,7 +43,7 @@
       >
         <div class="text-type_gray text-xs">0%</div>
         <div class="flex flex-col items-center">
-          <div class="text-[28px] font-bold leading-tight">90%</div>
+          <div class="text-[28px] font-bold leading-tight">{{ progress }}%</div>
           <div class="text-type_gray text-xs">Based on likes</div>
         </div>
         <div class="text-type_gray text-xs">100%</div>
