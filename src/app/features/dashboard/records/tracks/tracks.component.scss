@@ -9,8 +9,8 @@
 .semi-donut {
   --percentage: 0;
   --fill: #ff0;
-  width: 212px;
-  height: 106px;
+  width: 260px;
+  height: 130px;
   position: relative;
   font-size: 22px;
   font-weight: 600;
@@ -21,8 +21,8 @@
   justify-content: center;
   &:after {
     content: "";
-    width: 212px;
-    height: 212px;
+    width: 260px;
+    height: 260px;
     border: 10px solid;
     border-color: #22234b #22234b var(--fill) var(--fill);
     position: absolute;
