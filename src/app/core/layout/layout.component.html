@@ -1,5 +1,17 @@
 <div class="h-full relative text-white main-container">
   <div
+    class="absolute bottom-[20px] w-[40px] h-[40px] bg-pri_blue rounded-full z-50 flex items-center justify-center cursor-pointer transition-all duration-300"
+    [ngClass]="{ 'left-[10px]': !isMenuOpened, 'left-[240px]': isMenuOpened }"
+    matTooltip="{{ isMenuOpened ? 'Close side menu' : 'Open side menu' }}"
+    (click)="onToggleMenu()"
+  >
+    @if (isMenuOpened) {
+      <i class="fa fa-angle-double-left text-2xl"></i>
+    } @else {
+      <i class="fa fa-angle-double-right text-2xl"></i>
+    }
+  </div>
+  <div
     class="absolute top-0 left-0 bg-[url('assets/images/bg.png')] bg-no-repeat bg-cover object-contain h-full w-full z-10 blur-[100px]"
   >
     <div
@@ -13,7 +25,7 @@
         #drawer
         class="sidenav h-full flex justify-center items-center w-[464px] overflow-hidden"
         mode="side"
-        opened
+        [opened]="isMenuOpened"
       >
         <app-sidenav></app-sidenav>
       </mat-drawer>
