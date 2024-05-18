@@ -51,17 +51,50 @@
     </div>
   </div>
 
-  <div class="h-[344px] min-w-[350px] card rounded-[20px] py-8 px-5 record">
+  <div
+    class="h-[344px] min-w-[350px] card rounded-[20px] py-8 px-5 record-2 flex flex-col justify-between"
+  >
     <div class="flex items-center justify-between">
       <div class="text-lg font-bold">Referral Tracking</div>
       <div
-        class="flex items-center justify-center rounded-[12px] bg-[#1a2543] w-[37px] h-[37px]"
+        class="flex items-center justify-center rounded-[12px] bg-[#1a2543] w-[37px] h-[37px] cursor-pointer"
       >
-        <div class="flex items-center cursor-pointer space-x-[2px]">
+        <div class="flex items-center space-x-[2px]">
           <div class="w-[5px] h-[5px] rounded-full bg-[#7551FF]"></div>
           <div class="w-[5px] h-[5px] rounded-full bg-[#7551FF]"></div>
           <div class="w-[5px] h-[5px] rounded-full bg-[#7551FF]"></div>
         </div>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center">
+      <div class="space-y-5">
+        <div class="ref-number rounded-[20px] p-4 w-[200px]">
+          <div class="sub_text">Invited</div>
+          <div class="font-bold text-lg">145 people</div>
+        </div>
+        <div class="ref-number rounded-[20px] p-4 w-[200px]">
+          <div class="sub_text">Bonus</div>
+          <div class="font-bold text-lg">{{ "1465" | number }}</div>
+        </div>
+      </div>
+
+      <div>
+        <circle-progress
+          [percent]="85"
+          [radius]="80"
+          [showTitle]="false"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [outerStrokeWidth]="12"
+          [clockwise]="false"
+          [outerStrokeColor]="'#05CD99'"
+          [outerStrokeGradientStopColor]="'transparent'"
+          [outerStrokeGradient]="true"
+          [animation]="true"
+          [animationDuration]="300"
+          [showInnerStroke]="false"
+        ></circle-progress>
       </div>
     </div>
   </div>
