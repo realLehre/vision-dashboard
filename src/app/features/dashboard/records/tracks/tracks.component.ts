@@ -6,7 +6,7 @@ import { TracksModule } from './tracks.module';
 @Component({
   selector: 'app-tracks',
   standalone: true,
-  imports: [DecimalPipe, TracksModule],
+  imports: [DecimalPipe],
   templateUrl: './tracks.component.html',
   styleUrl: './tracks.component.scss',
 })

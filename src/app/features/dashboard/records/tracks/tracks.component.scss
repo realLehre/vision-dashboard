@@ -17,8 +17,8 @@
 .semi-donut {
   --percentage: 0;
   --fill: #ff0;
-  width: 260px;
-  height: 130px;
+  width: 200px;
+  height: 100px;
   position: relative;
   font-size: 22px;
   font-weight: 600;
@@ -29,8 +29,8 @@
   justify-content: center;
   &:after {
     content: "";
-    width: 260px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     border: 10px solid;
     border-color: #22234b #22234b var(--fill) var(--fill);
     position: absolute;
@@ -49,33 +49,4 @@
   50% {
     transform: rotate(135deg);
   }
-}
-
-.ref-number {
-  background: linear-gradient(
-    150deg,
-    rgba(6, 11, 38, 1) 0%,
-    rgba(4, 12, 48, 0) 100%
-  );
-}
-
-.safety-score {
-  & circle {
-    &:first-child {
-      stroke: transparent;
-    }
-
-    &:nth-child(2) {
-      stroke: #05cd99;
-    }
-  }
-}
-
-.percent {
-  stroke-dasharray: 100;
-  stroke-dashoffset: calc(100 - var(--val));
-}
-
-.ninety {
-  --val: 90;
 }

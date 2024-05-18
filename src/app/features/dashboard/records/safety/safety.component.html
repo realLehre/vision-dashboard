@@ -1,0 +1,56 @@
+<div
+  class="h-[344px] card rounded-[20px] py-8 px-5 record-2 flex flex-col justify-between"
+>
+  <div class="flex items-center justify-between">
+    <div class="text-lg font-bold">Referral Tracking</div>
+    <div
+      class="flex items-center justify-center rounded-[12px] bg-[#1a2543] w-[37px] h-[37px] cursor-pointer"
+    >
+      <div class="flex items-center space-x-[2px]">
+        <div class="w-[5px] h-[5px] rounded-full bg-[#7551FF]"></div>
+        <div class="w-[5px] h-[5px] rounded-full bg-[#7551FF]"></div>
+        <div class="w-[5px] h-[5px] rounded-full bg-[#7551FF]"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-between items-center">
+    <div class="space-y-5">
+      <div class="ref-number rounded-[20px] p-4 w-[200px]">
+        <div class="sub_text">Invited</div>
+        <div class="font-bold text-lg">145 people</div>
+      </div>
+      <div class="ref-number rounded-[20px] p-4 w-[200px]">
+        <div class="sub_text">Bonus</div>
+        <div class="font-bold text-lg">{{ "1465" | number }}</div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <circle-progress
+        [percent]="safetyScore"
+        [radius]="90"
+        [showTitle]="false"
+        [showSubtitle]="false"
+        [showUnits]="false"
+        [outerStrokeWidth]="12"
+        [clockwise]="false"
+        [outerStrokeColor]="'#05CD99'"
+        [outerStrokeGradientStopColor]="test"
+        [outerStrokeGradient]="true"
+        [animation]="true"
+        [animationDuration]="300"
+        [showInnerStroke]="false"
+      ></circle-progress>
+      <div
+        class="text-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
+      >
+        <div class="sub_text">Safety</div>
+        <div class="text-[50px] font-bold leading-tight">
+          {{ safetyScore / 10 }}
+        </div>
+        <div class="sub_text">Total Score</div>
+      </div>
+    </div>
+  </div>
+</div>
