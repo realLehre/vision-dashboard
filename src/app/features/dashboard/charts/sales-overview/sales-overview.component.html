@@ -1,5 +1,5 @@
-<div id="chart" class="rounded-[20px] p-4">
-  <div class="mb-4">
+<div id="chart" class="rounded-[20px] py-4 pr-4">
+  <div class="px-4">
     <div class="text-lg">Sales overview</div>
     <div class="text-sm">
       <span class="text-pri_green"
@@ -17,5 +17,7 @@
     [tooltip]="chartOptions['tooltip']"
     [dataLabels]="chartOptions['dataLabels']"
     [grid]="chartOptions['grid']"
+    [legend]="chartOptions['legend']"
+    [fill]="chartOptions['fill']"
   ></apx-chart>
 </div>
