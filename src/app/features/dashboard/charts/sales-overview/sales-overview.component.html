@@ -1,4 +1,4 @@
-<div id="chart" class="rounded-[20px] py-4 pr-4">
+<div id="chart" class="rounded-[20px] h-full py-4 pr-4 overflow-hidden w-full">
   <div class="px-4">
     <div class="text-lg">Sales overview</div>
     <div class="text-sm">
@@ -8,16 +8,18 @@
       >
     </div>
   </div>
-  <apx-chart
-    [series]="chartOptions['series']"
-    [chart]="chartOptions['chart']"
-    [xaxis]="chartOptions['xaxis']"
-    [yaxis]="chartOptions['yaxis']"
-    [stroke]="chartOptions['stroke']"
-    [tooltip]="chartOptions['tooltip']"
-    [dataLabels]="chartOptions['dataLabels']"
-    [grid]="chartOptions['grid']"
-    [legend]="chartOptions['legend']"
-    [fill]="chartOptions['fill']"
-  ></apx-chart>
+  <div class="w-full overflow-x-scroll">
+    <apx-chart
+      [series]="chartOptions['series']"
+      [chart]="chartOptions['chart']"
+      [xaxis]="chartOptions['xaxis']"
+      [yaxis]="chartOptions['yaxis']"
+      [stroke]="chartOptions['stroke']"
+      [tooltip]="chartOptions['tooltip']"
+      [dataLabels]="chartOptions['dataLabels']"
+      [grid]="chartOptions['grid']"
+      [legend]="chartOptions['legend']"
+      [fill]="chartOptions['fill']"
+    ></apx-chart>
+  </div>
 </div>

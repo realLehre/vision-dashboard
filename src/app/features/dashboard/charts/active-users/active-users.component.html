@@ -1,4 +1,4 @@
-<div id="active-users" class="rounded-[20px] p-4">
+<div id="active-users" class="rounded-[20px] p-4 h-full">
   <div>
     <div>
       <div class="text-lg">Active users</div>
@@ -9,8 +9,10 @@
       </div>
     </div>
 
-    <div class="flex items-start mt-4">
-      <div>
+    <div
+      class="flex items-start flex-wrap justify-between gap-x-3 gap-y-6 mt-6 w-[90%]"
+    >
+      <div class="w-[100px]">
         <div class="flex items-center">
           <div
             class="rounded-[6px] bg-pri_blue mr-3 w-[25px] h-[25px] flex items-center justify-center"
@@ -23,6 +25,118 @@
             />
           </div>
           <div class="sub_text">Users</div>
+        </div>
+
+        <div class="mt-2">
+          <div class="text-lg font-bold">{{ "32984" | number }}</div>
+          <div
+            class="w-full h-[4px] rounded-md bg-[#2D2E5F] mt-1 relative overflow-hidden"
+          >
+            <div
+              [class]="
+                'absolute rounded-md left-0 top-0 h-full bg-pri_blue w-[' +
+                60 +
+                '%]'
+              "
+              [style.width.%]="60"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[100px]">
+        <div class="flex items-center">
+          <div
+            class="rounded-[6px] bg-pri_blue mr-3 w-[25px] h-[25px] flex items-center justify-center"
+          >
+            <img
+              src="assets/images/icons/rocket.png"
+              alt=""
+              width="12"
+              height="12"
+            />
+          </div>
+          <div class="sub_text">Clicks</div>
+        </div>
+
+        <div class="mt-2">
+          <div class="text-lg font-bold">2,32m</div>
+          <div
+            class="w-full h-[4px] rounded-md bg-[#2D2E5F] mt-1 relative overflow-hidden"
+          >
+            <div
+              [class]="
+                'absolute rounded-md left-0 top-0 h-full bg-pri_blue w-[' +
+                60 +
+                '%]'
+              "
+              [style.width.%]="80"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[100px]">
+        <div class="flex items-center">
+          <div
+            class="rounded-[6px] bg-pri_blue mr-3 w-[25px] h-[25px] flex items-center justify-center"
+          >
+            <img
+              src="assets/images/icons/sales.png"
+              alt=""
+              width="12"
+              height="12"
+            />
+          </div>
+          <div class="sub_text">Sales</div>
+        </div>
+
+        <div class="mt-2">
+          <div class="text-lg font-bold">{{ "2400" | currency: "$" }}</div>
+          <div
+            class="w-full h-[4px] rounded-md bg-[#2D2E5F] mt-1 relative overflow-hidden"
+          >
+            <div
+              [class]="
+                'absolute rounded-md left-0 top-0 h-full bg-pri_blue w-[' +
+                60 +
+                '%]'
+              "
+              [style.width.%]="40"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[100px]">
+        <div class="flex items-center">
+          <div
+            class="rounded-[6px] bg-pri_blue mr-3 w-[25px] h-[25px] flex items-center justify-center"
+          >
+            <img
+              src="assets/images/icons/spanner.png"
+              alt=""
+              width="12"
+              height="12"
+            />
+          </div>
+          <div class="sub_text">Items</div>
+        </div>
+
+        <div class="mt-2">
+          <div class="text-lg font-bold">{{ "430" | number }}</div>
+          <div
+            class="w-full h-[4px] rounded-md bg-[#2D2E5F] mt-1 relative overflow-hidden"
+          >
+            <div
+              [class]="
+                'absolute rounded-md left-0 top-0 h-full bg-pri_blue w-[' +
+                60 +
+                '%]'
+              "
+              [style.width.%]="50"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
