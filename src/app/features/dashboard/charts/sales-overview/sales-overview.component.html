@@ -1,10 +1,21 @@
 <div id="chart" class="rounded-[20px] p-4">
+  <div class="mb-4">
+    <div class="text-lg">Sales overview</div>
+    <div class="text-sm">
+      <span class="text-pri_green"
+        >(+5) more
+        <span class="text-type_gray">in {{ currentYear }}</span></span
+      >
+    </div>
+  </div>
   <apx-chart
     [series]="chartOptions['series']"
     [chart]="chartOptions['chart']"
     [xaxis]="chartOptions['xaxis']"
+    [yaxis]="chartOptions['yaxis']"
     [stroke]="chartOptions['stroke']"
     [tooltip]="chartOptions['tooltip']"
     [dataLabels]="chartOptions['dataLabels']"
+    [grid]="chartOptions['grid']"
   ></apx-chart>
 </div>
