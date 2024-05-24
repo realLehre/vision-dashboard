@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { LayoutService } from '../services/layout.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -10,6 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './sidenav.component.scss',
 })
 export class SidenavComponent implements OnInit {
-  navItems: { icon: string; name: string }[] = [];
+  layoutService = inject(LayoutService);
   ngOnInit() {}
+
+  onCloseSidenav() {
+    this.layoutService.menuOpened.set(false);
+  }
 }

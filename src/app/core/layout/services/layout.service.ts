@@ -4,5 +4,8 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class LayoutService {
-  constructor() {}
+  menuOpened = signal(false);
+  constructor() {
+    this.menuOpened.set(JSON.parse(sessionStorage.getItem('menuStatus')!));
+  }
 }

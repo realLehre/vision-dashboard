@@ -13,3 +13,18 @@
 .sidenav {
   background-color: transparent;
 }
+
+#mobile-sidenav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 550px) {
+  #sidenav-toggle {
+    display: none;
+  }
+  //.sidenav {
+  //  display: none;
+  //}
+}

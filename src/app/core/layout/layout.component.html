@@ -1,6 +1,7 @@
-<div class="h-full relative text-white main-container">
+<div class="h-full relative text-white main-container" #container>
   <div
     class="absolute bottom-[20px] w-[40px] h-[40px] bg-pri_blue rounded-full z-50 flex items-center justify-center cursor-pointer transition-all duration-300"
+    id="sidenav-toggle"
     [ngClass]="{ 'left-[10px]': !isMenuOpened, 'left-[240px]': isMenuOpened }"
     matTooltip="{{ isMenuOpened ? 'Close side menu' : 'Open side menu' }}"
     (click)="onToggleMenu()"
@@ -25,14 +26,17 @@
         #drawer
         class="sidenav h-full flex justify-center items-center w-[464px] overflow-hidden"
         mode="side"
-        [opened]="isMenuOpened"
+        [opened]="isMenuOpenedSig()"
       >
         <app-sidenav></app-sidenav>
       </mat-drawer>
 
-      <div class="h-full w-full">
+      <div class="h-full w-full relative">
         <app-main-content></app-main-content>
       </div>
+      <!--      <div id="mobile-sidenav">-->
+      <!--        <app-sidenav></app-sidenav>-->
+      <!--      </div>-->
     </mat-drawer-container>
   </div>
 </div>
