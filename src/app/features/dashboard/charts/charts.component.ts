@@ -2,12 +2,15 @@ import {
   Component,
   ElementRef,
   HostListener,
+  inject,
   OnInit,
   ViewChild,
+  WritableSignal,
 } from '@angular/core';
 import { SalesOverviewComponent } from './sales-overview/sales-overview.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { NgClass } from '@angular/common';
+import { DashboardService } from '../services/dashboard.service';
 
 @Component({
   selector: 'app-charts',
@@ -17,16 +20,8 @@ import { NgClass } from '@angular/common';
   styleUrl: './charts.component.scss',
 })
 export class ChartsComponent implements OnInit {
-  @ViewChild('charts', { static: true })
-  chartsContainer!: ElementRef<HTMLDivElement>;
-  containerWidth!: number;
+  dashboardService = inject(DashboardService);
+  containerWidth: WritableSignal<number> = this.dashboardService.dashboardWidth;
 
-  ngOnInit() {
-    this.onResize();
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.containerWidth = this.chartsContainer.nativeElement.offsetWidth;
-  }
+  ngOnInit() {}
 }

@@ -1,10 +1,10 @@
 <div class="flex flex-wrap gap-3 w-full" #charts>
   <app-sales-overview
     class="w-3/5 min-w-[500px] flex-1 min-h-[440px]"
-    [ngClass]="{ 'min-w-full': containerWidth < 830 }"
+    [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
   ></app-sales-overview>
   <app-active-users
     class="w-2/5 min-w-[320px] flex-1 min-h-[440px]"
-    [ngClass]="{ 'min-w-full': containerWidth < 830 }"
+    [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
   ></app-active-users>
 </div>
