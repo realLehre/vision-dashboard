@@ -1,4 +1,8 @@
-<div id="users-chart" class="p-2 rounded-[20px]">
+<div
+  id="users-chart"
+  class="p-2 rounded-[20px] w-full overflow-x-scroll"
+  style="overflow-y: hidden !important"
+>
   <apx-chart
     [series]="chartOptions['series']"
     [chart]="chartOptions['chart']"
