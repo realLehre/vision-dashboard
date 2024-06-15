@@ -1,0 +1,26 @@
+<div>
+  <app-generic-table>
+    <ng-template #heading>
+      <div class="text-lg">Projects</div>
+      <div class="w-5 h-5 cursor-pointer flex items-center justify-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 128 512"
+          class="w-1 fill-type_gray"
+        >
+          <path
+            d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
+          />
+        </svg>
+      </div>
+    </ng-template>
+    <div class="flex items-center mt-1" sub_heading>
+      <div
+        class="flex items-center justify-center bg-pri_green rounded-full mr-2 w-[12px] h-[12px]"
+      >
+        <i class="fa fa-check text-primary font-light text-xs"></i>
+      </div>
+      <div class="text-sm text-type_gray">30 done this month</div>
+    </div>
+  </app-generic-table>
+</div>

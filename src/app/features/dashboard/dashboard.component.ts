@@ -10,11 +10,17 @@ import { QuickInfoComponent } from './quick-info/quick-info.component';
 import { RecordsComponent } from './records/records.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DashboardService } from './services/dashboard.service';
+import { DashTablesComponent } from './dash-tables/dash-tables.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [QuickInfoComponent, RecordsComponent, ChartsComponent],
+  imports: [
+    QuickInfoComponent,
+    RecordsComponent,
+    ChartsComponent,
+    DashTablesComponent,
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })

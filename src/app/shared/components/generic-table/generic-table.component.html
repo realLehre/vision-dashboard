@@ -1,1 +1,6 @@
-<p>generic-table works!</p>
+<div>
+  <div class="flex justify-between items-center">
+    <ng-container *ngTemplateOutlet="headingTemplate"> </ng-container>
+  </div>
+  <ng-content select="[sub_heading]"></ng-content>
+</div>
