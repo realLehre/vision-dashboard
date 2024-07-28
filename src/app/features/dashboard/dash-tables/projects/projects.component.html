@@ -22,5 +22,22 @@
       </div>
       <div class="text-sm text-type_gray">30 done this month</div>
     </div>
+
+    <ng-template #head>
+      <tr>
+        <th pSortableColumn="code" style="width: 20%">
+          Code <p-sortIcon field="code" />
+        </th>
+        <th pSortableColumn="name" style="width: 20%">
+          Name <p-sortIcon field="name" />
+        </th>
+        <th pSortableColumn="category" style="width: 20%">
+          Category <p-sortIcon field="category" />
+        </th>
+        <th pSortableColumn="quantity" style="width: 20%">
+          Quantity <p-sortIcon field="quantity" />
+        </th>
+      </tr>
+    </ng-template>
   </app-generic-table>
 </div>

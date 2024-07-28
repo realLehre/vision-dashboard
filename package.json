@@ -23,6 +23,7 @@
     "apexcharts": "^3.49.1",
     "ng-apexcharts": "^1.10.0",
     "ng-circle-progress": "^1.7.1",
+    "primeng": "^17.18.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

@@ -50,6 +50,7 @@ export class SalesOverviewService {
       },
       stroke: {
         curve: 'smooth',
+        width: 3,
         colors: [...this.colors],
       },
       fill: {
