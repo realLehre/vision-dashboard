@@ -1,0 +1,27 @@
+<div class="dash-tables p-4 rounded-[20px] max-h-[500px] min-h-[500px]">
+  <div class="text-lg">Orders overview</div>
+
+  <div class="flex items-center mt-1">
+    <div
+      class="flex items-center justify-center bg-pri_green rounded-full mr-2 w-[12px] h-[12px]"
+    >
+      <i class="fa fa-check text-primary font-light text-xs"></i>
+    </div>
+    <div class="text-sm text-type_gray">+30% this month</div>
+  </div>
+
+  <div class="mt-4 h-full flex flex-col space-y-5">
+    @for (order of ordersOverview; track $index) {
+      <div class="flex items-start">
+        <div>
+          <img src="assets/images/icons/card.png" alt="" />
+        </div>
+
+        <div>
+          <div class="text-sm">{{ order.order }}</div>
+          <div class="text-xs text-type_gray mt-1">{{ order.date }}</div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
