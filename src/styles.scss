@@ -24,3 +24,21 @@ body {
 .sub_text {
   @apply text-sm text-type_gray;
 }
+
+.mat-mdc-table {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.mat-mdc-cell,
+.mat-mdc-header-cell {
+  border-bottom-color: #56577a !important;
+  color: #fff !important;
+  font-family: "Plus Jakarta Display", sans-serif !important;
+}
+
+.mat-mdc-header-cell {
+  color: theme("colors.type_gray") !important;
+  font-weight: 500 !important;
+  font-size: 10px;
+}

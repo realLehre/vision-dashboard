@@ -25,6 +25,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class GenericTableComponent {
   @ContentChild('heading') headingTemplate!: TemplateRef<any>;
   @ContentChild('head') headTemplate!: TemplateRef<any>;
+  @ContentChild('content') contentTemplate!: TemplateRef<any>;
   displayedColumns: string[] = ['companies', 'members', 'budget', 'completion'];
   products: any[] = [
     {
