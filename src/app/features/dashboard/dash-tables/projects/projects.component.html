@@ -22,47 +22,66 @@
       </div>
       <div class="text-sm text-type_gray">30 done this month</div>
     </div>
-
+    <img src="assets/images/members/member-1.png" alt="" />
     <div class="mat-elevation-z8 mt-5" main_content>
       <table
         mat-table
-        [dataSource]="products"
+        [dataSource]="projects"
         matSort
         class="bg-transparent my-table"
       >
-        <!--       ID Column -->
         <ng-container matColumnDef="companies">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>COMPANIES</th>
-          <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+          <td mat-cell *matCellDef="let row">
+            <div class="flex items-center space-x-4">
+              <span><img [src]="row.logo" /></span>
+              <span>{{ row.company }}</span>
+            </div>
+          </td>
         </ng-container>
 
-        <!-- Progress Column -->
         <ng-container matColumnDef="members">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>MEMBERS</th>
-          <td mat-cell *matCellDef="let row">{{ row.name }}%</td>
+          <td mat-cell *matCellDef="let row">
+            <div class="flex items-center">
+              @for (img of row.members; track img; let i = $index) {
+                <img
+                  [src]="img"
+                  alt=""
+                  class="rounded-full w-[20px] h-[20px]"
+                  [ngClass]="{ '-ml-[8px]': i > 0 }"
+                />
+              }
+            </div>
+          </td>
         </ng-container>
 
-        <!-- Name Column -->
         <ng-container matColumnDef="budget">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>BUDGET</th>
-          <td mat-cell *matCellDef="let row">{{ row.image }}</td>
+          <td mat-cell *matCellDef="let row">
+            {{ row.budget | currency: "$" }}
+          </td>
         </ng-container>
 
-        <!-- Fruit Column -->
         <ng-container matColumnDef="completion">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>COMPLETION</th>
-          <td mat-cell *matCellDef="let row">{{ row.fruit }}</td>
+          <td mat-cell *matCellDef="let row">
+            <div class="w-[80%]">
+              <div>{{ row.completion }}%</div>
+              <div
+                class="w-full bg-slight_dark h-[3px] rounded-[2px] mt-[2px] relative"
+              >
+                <div
+                  class="absolute rounded-[2px] left-0 top-0 h-full bg-pri_blue"
+                  [style.width.%]="row.completion"
+                ></div>
+              </div>
+            </div>
+          </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-
-        <!-- Row shown when there is no matching data. -->
-        <!--			<tr class="mat-row" *matNoDataRow>-->
-        <!--				<td class="mat-cell" colspan="4">-->
-        <!--					No data matching the filter "{{ input.value }}"-->
-        <!--				</td>-->
-        <!--			</tr>-->
       </table>
     </div>
   </app-generic-table>

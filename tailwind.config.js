@@ -9,6 +9,7 @@ module.exports = {
         pri_blue: "#0075FF",
         pri_green: "#01B574",
         pri_red: "#E31A1A",
+        slight_dark: "#2D2E5F",
       },
     },
   },
