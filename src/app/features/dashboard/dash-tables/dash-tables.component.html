@@ -1,6 +1,13 @@
-<div class="flex items-center gap-3">
-  <app-projects class="w-3/5 min-w-[500px] flex-1"></app-projects>
+<div
+  class="flex items-center gap-3"
+  [ngClass]="{ 'flex-col': containerWidth() < 830 }"
+>
+  <app-projects
+    class="w-[70%] min-w-[500px]"
+    [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
+  ></app-projects>
   <app-orders-overview
-    class="w-2/5 min-w-[320px] max-w-[800px] flex-1"
+    class="w-[30%] min-w-[320px] max-w-[800px]"
+    [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
   ></app-orders-overview>
 </div>

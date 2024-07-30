@@ -10,14 +10,14 @@
     <div class="text-sm text-type_gray">+30% this month</div>
   </div>
 
-  <div class="mt-4 h-full flex flex-col space-y-5">
+  <div class="mt-4 flex flex-col h-[400px] space-y-5 overflow-y-auto">
     @for (order of ordersOverview; track $index) {
-      <div class="flex items-start">
-        <div>
-          <img src="assets/images/icons/card.png" alt="" />
+      <div class="flex items-start space-x-4">
+        <div class="leading-tight">
+          <img src="assets/images/icons/card.png" alt="" class="mt-1" />
         </div>
 
-        <div>
+        <div class="leading-tight">
           <div class="text-sm">{{ order.order }}</div>
           <div class="text-xs text-type_gray mt-1">{{ order.date }}</div>
         </div>
