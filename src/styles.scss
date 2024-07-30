@@ -50,3 +50,31 @@ body {
     rgba(10, 14, 35, 0.71) 100%
   );
 }
+
+.my-menu.mat-mdc-menu-panel {
+  background-color: #060b28bc !important;
+}
+
+.my-menu .mat-mdc-menu-item,
+.mat-mdc-menu-item:visited,
+.mat-mdc-menu-item:link {
+  color: #fff !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme("colors.pri_blue");
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme("colors.pri_blue");
+}

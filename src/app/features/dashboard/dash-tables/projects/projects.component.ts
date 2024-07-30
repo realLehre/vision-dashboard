@@ -24,6 +24,7 @@ import { CurrencyPipe, NgClass, NgTemplateOutlet } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Project, ProjectsService } from './services/projects.service';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-projects',
@@ -37,6 +38,7 @@ import { Project, ProjectsService } from './services/projects.service';
     NgTemplateOutlet,
     CurrencyPipe,
     NgClass,
+    MatMenuModule,
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',

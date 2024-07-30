@@ -5,6 +5,7 @@
     <div class="text-lg font-bold">Referral Tracking</div>
     <div
       class="flex items-center justify-center rounded-[12px] bg-[#1a2543] w-[37px] h-[37px] cursor-pointer"
+      [matMenuTriggerFor]="menu"
     >
       <div class="flex items-center space-x-[2px]">
         <div class="w-[5px] h-[5px] rounded-full bg-[#7551FF]"></div>
@@ -55,4 +56,8 @@
       </div>
     </div>
   </div>
+
+  <mat-menu #menu="matMenu" class="my-menu">
+    <button mat-menu-item class="text-white">Do something...</button>
+  </mat-menu>
 </div>

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { TracksModule } from '../tracks/tracks.module';
+import { MatMenu, MatMenuItem, MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-safety',
   standalone: true,
-  imports: [DecimalPipe, TracksModule],
+  imports: [DecimalPipe, TracksModule, MatMenu, MatMenuItem, MatMenuTrigger],
   templateUrl: './safety.component.html',
   styleUrl: './safety.component.scss',
 })
