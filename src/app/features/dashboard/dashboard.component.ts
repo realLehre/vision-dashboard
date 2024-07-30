@@ -11,6 +11,7 @@ import { RecordsComponent } from './records/records.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DashboardService } from './services/dashboard.service';
 import { DashTablesComponent } from './dash-tables/dash-tables.component';
+import { SidePanelComponent } from '../../core/layout/side-panel/side-panel.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,6 +21,7 @@ import { DashTablesComponent } from './dash-tables/dash-tables.component';
     RecordsComponent,
     ChartsComponent,
     DashTablesComponent,
+    SidePanelComponent,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',

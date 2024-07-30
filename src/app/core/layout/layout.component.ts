@@ -19,6 +19,7 @@ import { LayoutService } from './services/layout.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { of } from 'rxjs';
 import { DashboardService } from '../../features/dashboard/services/dashboard.service';
+import { SidePanelComponent } from './side-panel/side-panel.component';
 
 @Component({
   selector: 'app-layout',
@@ -29,6 +30,7 @@ import { DashboardService } from '../../features/dashboard/services/dashboard.se
     MainContentComponent,
     MatTooltipModule,
     NgClass,
+    SidePanelComponent,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
