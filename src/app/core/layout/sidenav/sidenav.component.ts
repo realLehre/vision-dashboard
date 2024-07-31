@@ -20,11 +20,7 @@ import { LayoutService } from '../services/layout.service';
 export class SidenavComponent implements OnInit {
   layoutService = inject(LayoutService);
   primaryColor: WritableSignal<string> = this.layoutService.primaryColor;
-  // @ViewChild('path', { static: true }) path!: ElementRef<any>;
-  ngOnInit() {
-    // this.path.nativeElement.setAttribute('fill', this.primaryColor);
-    console.log(this.primaryColor());
-  }
+  ngOnInit() {}
 
   onCloseSidenav() {
     this.layoutService.menuOpened.set(false);

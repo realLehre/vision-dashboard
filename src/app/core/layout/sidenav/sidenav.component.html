@@ -29,7 +29,14 @@
             routerLinkActive="active-route"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            <span class="ml-4 mr-4 p-2 rounded-xl"
+            <span
+              class="ml-4 mr-4 p-2 rounded-xl bg-bg_gray"
+              [ngStyle]="{
+                backgroundColor:
+                  layoutService.currentRoute() == 'dashboard'
+                    ? primaryColor()
+                    : '#1A1F37'
+              }"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -66,7 +73,14 @@
             routerLinkActive="active-route"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            <span class="ml-4 mr-4 p-2 rounded-xl"
+            <span
+              class="ml-4 mr-4 p-2 rounded-xl bg-bg_gray"
+              [ngStyle]="{
+                backgroundColor:
+                  layoutService.currentRoute() == 'tables'
+                    ? primaryColor()
+                    : '#1A1F37'
+              }"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -111,7 +125,14 @@
             routerLinkActive="active-route"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            <span class="ml-4 mr-4 p-2 rounded-xl"
+            <span
+              class="ml-4 mr-4 p-2 rounded-xl bg-bg_gray"
+              [ngStyle]="{
+                backgroundColor:
+                  layoutService.currentRoute() == 'billing'
+                    ? primaryColor()
+                    : '#1A1F37'
+              }"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -136,7 +157,14 @@
             routerLinkActive="active-route"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            <span class="mx-4 p-2 rounded-xl"
+            <span
+              class="mx-4 p-2 rounded-xl bg-bg_gray"
+              [ngStyle]="{
+                backgroundColor:
+                  layoutService.currentRoute() == 'rtl'
+                    ? primaryColor()
+                    : '#1A1F37'
+              }"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -163,7 +191,14 @@
               routerLinkActive="active-route"
               [routerLinkActiveOptions]="{ exact: true }"
             >
-              <span class="mx-4 p-2 rounded-xl"
+              <span
+                class="mx-4 p-2 rounded-xl bg-bg_gray"
+                [ngStyle]="{
+                  backgroundColor:
+                    layoutService.currentRoute() == 'profile'
+                      ? primaryColor()
+                      : '#1A1F37'
+                }"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -188,7 +223,14 @@
               routerLinkActive="active-route"
               [routerLinkActiveOptions]="{ exact: true }"
             >
-              <span class="mx-4 p-2 rounded-xl"
+              <span
+                class="mx-4 p-2 rounded-xl bg-bg_gray"
+                [ngStyle]="{
+                  backgroundColor:
+                    layoutService.currentRoute() == 'sign-in'
+                      ? primaryColor()
+                      : '#1A1F37'
+                }"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -213,7 +255,14 @@
               routerLinkActive="active-route"
               [routerLinkActiveOptions]="{ exact: true }"
             >
-              <span class="mx-4 p-2 rounded-xl"
+              <span
+                class="mx-4 p-2 rounded-xl bg-bg_gray"
+                [ngStyle]="{
+                  backgroundColor:
+                    layoutService.currentRoute() == 'sign-up'
+                      ? primaryColor()
+                      : '#1A1F37'
+                }"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

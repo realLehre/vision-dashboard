@@ -1,12 +1,15 @@
-import { Injectable, signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LayoutService {
   menuOpened = signal(false);
-  sidePanelOpened = signal<boolean>(false);
+  sidePanelOpened = signal<boolean>(true);
   primaryColor = signal<string>('');
+  router = inject(ActivatedRoute);
+  currentRoute = signal('');
   constructor() {
     this.menuOpened.set(JSON.parse(sessionStorage.getItem('menuStatus')!));
     if (localStorage.getItem('primaryColor')) {

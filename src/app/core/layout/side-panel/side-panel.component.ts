@@ -25,8 +25,11 @@ export class SidePanelComponent implements OnInit {
   });
 
   ngOnInit() {
+    const primaryColor = localStorage.getItem('primaryColor');
+    if (primaryColor) {
+      this.formGroup.get('color')?.setValue(primaryColor);
+    }
     this.formGroup.valueChanges.subscribe((val) => {
-      console.log(val);
       this.layoutService.primaryColor.set(val.color);
       localStorage.setItem('primaryColor', val.color);
     });
