@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, HostListener, inject, OnInit } from '@angular/core';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -36,5 +36,13 @@ export class AppComponent implements OnInit {
         const routeSnapshot = currentRoute.snapshot;
         this.layoutService.currentRoute.set(routeSnapshot.url[0].path);
       });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  handleScroll() {
+    console.log(1);
+    const isScrolled = window.scrollY > 50;
+    console.log(window.scrollY);
+    console.log(isScrolled);
   }
 }

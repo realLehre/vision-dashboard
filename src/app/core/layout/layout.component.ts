@@ -20,6 +20,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { of } from 'rxjs';
 import { DashboardService } from '../../features/dashboard/services/dashboard.service';
 import { SidePanelComponent } from './side-panel/side-panel.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-layout',
@@ -32,6 +33,7 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
     NgClass,
     SidePanelComponent,
     NgStyle,
+    HeaderComponent,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',

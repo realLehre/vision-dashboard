@@ -35,8 +35,8 @@
         <app-sidenav></app-sidenav>
       </mat-drawer>
 
-      <div class="h-full w-full relative">
-        <app-main-content></app-main-content>
+      <div class="h-full w-[97%] mx-auto relative">
+        <app-main-content> </app-main-content>
         <app-side-panel
           class="fixed right-[0px] top-0 side_panel"
           [ngClass]="{ open: layoutService.sidePanelOpened() }"

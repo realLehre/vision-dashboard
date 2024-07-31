@@ -1,7 +1,9 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   HostListener,
+  Inject,
   inject,
   OnInit,
   ViewChild,
@@ -12,6 +14,7 @@ import { ChartsComponent } from './charts/charts.component';
 import { DashboardService } from './services/dashboard.service';
 import { DashTablesComponent } from './dash-tables/dash-tables.component';
 import { SidePanelComponent } from '../../core/layout/side-panel/side-panel.component';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,19 +29,21 @@ import { SidePanelComponent } from '../../core/layout/side-panel/side-panel.comp
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
+  document = inject(DOCUMENT);
   @ViewChild('dashboard', { static: true })
   dashboardContainer!: ElementRef<HTMLDivElement>;
   dashboardService = inject(DashboardService);
 
-  ngOnInit() {
-    this.onResize();
-  }
+  ngOnInit() {}
 
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.dashboardService.dashboardWidth.set(
-      this.dashboardContainer.nativeElement.offsetWidth,
-    );
+  ngAfterViewInit() {}
+
+  @HostListener('document:scroll', ['$event'])
+  handleScroll() {
+    console.log(1);
+    const isScrolled = window.scrollY > 50;
+    console.log(window.scrollY);
+    console.log(isScrolled);
   }
 }
