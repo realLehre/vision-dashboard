@@ -14,7 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { LayoutService } from './services/layout.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { of } from 'rxjs';
@@ -31,6 +31,7 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
     MatTooltipModule,
     NgClass,
     SidePanelComponent,
+    NgStyle,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',

@@ -25,9 +25,10 @@
         <ul class="nav-links w-full">
           <li
             class="flex items-center text-sm tracking-wide rounded-2xl cursor-pointer"
-            routerLink="/dashboard"
+            routerLink="dashboard"
             routerLinkActive="active-route"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="onNavigate('dashboard')"
           >
             <span
               class="ml-4 mr-4 p-2 rounded-xl bg-bg_gray"
@@ -69,9 +70,10 @@
           </li>
           <li
             class="flex items-center text-sm tracking-wide rounded-2xl cursor-pointer"
-            routerLink="/tables"
+            routerLink="tables"
             routerLinkActive="active-route"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="onNavigate('tables')"
           >
             <span
               class="ml-4 mr-4 p-2 rounded-xl bg-bg_gray"
@@ -124,6 +126,7 @@
             routerLink="/billing"
             routerLinkActive="active-route"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="onNavigate('billing')"
           >
             <span
               class="ml-4 mr-4 p-2 rounded-xl bg-bg_gray"
@@ -153,9 +156,10 @@
           </li>
           <li
             class="flex items-center text-sm tracking-wide rounded-2xl cursor-pointer"
-            routerLink="/rtl"
+            routerLink="rtl"
             routerLinkActive="active-route"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="onNavigate('rtl')"
           >
             <span
               class="mx-4 p-2 rounded-xl bg-bg_gray"
@@ -187,9 +191,10 @@
           <ul class="nav-links">
             <li
               class="flex items-center text-sm tracking-wide rounded-2xl cursor-pointer"
-              routerLink="/profile"
+              routerLink="profile"
               routerLinkActive="active-route"
               [routerLinkActiveOptions]="{ exact: true }"
+              (click)="onNavigate('profile')"
             >
               <span
                 class="mx-4 p-2 rounded-xl bg-bg_gray"
@@ -219,9 +224,10 @@
             </li>
             <li
               class="flex items-center text-sm tracking-wide rounded-2xl cursor-pointer"
-              routerLink="/sign-in"
               routerLinkActive="active-route"
+              routerLink="/sign-in"
               [routerLinkActiveOptions]="{ exact: true }"
+              (click)="onNavigate('sign-in')"
             >
               <span
                 class="mx-4 p-2 rounded-xl bg-bg_gray"
@@ -251,9 +257,10 @@
             </li>
             <li
               class="flex items-center text-sm tracking-wide rounded-2xl cursor-pointer"
-              routerLink="/sign-up"
               routerLinkActive="active-route"
+              routerLink="/sign-up"
               [routerLinkActiveOptions]="{ exact: true }"
+              (click)="onNavigate('sign-up')"
             >
               <span
                 class="mx-4 p-2 rounded-xl bg-bg_gray"

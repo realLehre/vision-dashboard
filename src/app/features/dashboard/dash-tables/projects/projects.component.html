@@ -76,8 +76,9 @@
                 class="w-full bg-slight_dark h-[3px] rounded-[2px] mt-[2px] relative"
               >
                 <div
-                  class="absolute rounded-[2px] left-0 top-0 h-full bg-pri_blue"
+                  class="absolute rounded-[2px] left-0 top-0 h-full"
                   [style.width.%]="row.completion"
+                  [style.background-color]="layoutService.primaryColor()"
                 ></div>
               </div>
             </div>

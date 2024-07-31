@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CurrencyPipe, DecimalPipe } from '@angular/common';
-import {ActiveUsersChartComponent} from "./active-users-chart/active-users-chart.component";
+import { ActiveUsersChartComponent } from './active-users-chart/active-users-chart.component';
+import { LayoutService } from '../../../../core/layout/services/layout.service';
 
 @Component({
   selector: 'app-active-users',
@@ -9,4 +10,6 @@ import {ActiveUsersChartComponent} from "./active-users-chart/active-users-chart
   templateUrl: './active-users.component.html',
   styleUrl: './active-users.component.scss',
 })
-export class ActiveUsersComponent {}
+export class ActiveUsersComponent {
+  layoutService = inject(LayoutService);
+}

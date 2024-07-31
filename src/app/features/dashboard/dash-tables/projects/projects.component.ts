@@ -25,6 +25,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Project, ProjectsService } from './services/projects.service';
 import { MatMenuModule } from '@angular/material/menu';
+import { LayoutService } from '../../../../core/layout/services/layout.service';
 
 @Component({
   selector: 'app-projects',
@@ -45,8 +46,8 @@ import { MatMenuModule } from '@angular/material/menu';
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
   projectsService = inject(ProjectsService);
+  layoutService = inject(LayoutService);
   displayedColumns: string[] = ['companies', 'members', 'budget', 'completion'];
-
   projects!: MatTableDataSource<Project>;
   @ViewChild(MatSort) sort!: MatSort;
 

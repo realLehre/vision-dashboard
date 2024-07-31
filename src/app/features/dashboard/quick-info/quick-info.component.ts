@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CurrencyPipe, DecimalPipe } from '@angular/common';
+import { LayoutService } from '../../../core/layout/services/layout.service';
 
 @Component({
   selector: 'app-quick-info',
@@ -8,4 +9,6 @@ import { CurrencyPipe, DecimalPipe } from '@angular/common';
   templateUrl: './quick-info.component.html',
   styleUrl: './quick-info.component.scss',
 })
-export class QuickInfoComponent {}
+export class QuickInfoComponent {
+  layoutService = inject(LayoutService);
+}

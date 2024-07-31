@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LayoutService {
   menuOpened = signal(false);
-  sidePanelOpened = signal<boolean>(true);
+  sidePanelOpened = signal<boolean>(false);
   primaryColor = signal<string>('');
   router = inject(ActivatedRoute);
   currentRoute = signal('');
@@ -15,7 +15,7 @@ export class LayoutService {
     if (localStorage.getItem('primaryColor')) {
       this.primaryColor.set(localStorage.getItem('primaryColor')!);
     } else {
-      this.primaryColor.set('red');
+      this.primaryColor.set('#0075FF');
     }
   }
 }

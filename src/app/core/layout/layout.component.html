@@ -3,8 +3,9 @@
   #container
 >
   <div
-    class="absolute bottom-[20px] w-[40px] h-[40px] bg-pri_blue rounded-full z-50 flex items-center justify-center cursor-pointer transition-all duration-300"
+    class="absolute bottom-[20px] w-[40px] h-[40px] rounded-full z-50 flex items-center justify-center cursor-pointer transition-all duration-300"
     id="sidenav-toggle"
+    [style.background-color]="layoutService.primaryColor()"
     [ngClass]="{ 'left-[10px]': !isMenuOpened, 'left-[240px]': isMenuOpened }"
     matTooltip="{{ isMenuOpened ? 'Close side menu' : 'Open side menu' }}"
     (click)="onToggleMenu()"
@@ -37,7 +38,7 @@
       <div class="h-full w-full relative">
         <app-main-content></app-main-content>
         <app-side-panel
-          class="fixed right-[5px] top-0 side_panel"
+          class="fixed right-[0px] top-0 side_panel"
           [ngClass]="{ open: layoutService.sidePanelOpened() }"
         ></app-side-panel>
       </div>
