@@ -34,4 +34,7 @@ export class HeaderComponent {
   onOpenMenu() {
     this.layoutService.menuOpened.set(true);
   }
+  onOpenSidePanel() {
+    this.layoutService.sidePanelOpened.set(true);
+  }
 }

@@ -1,4 +1,11 @@
-import { Component, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  OnInit,
+  ViewChild,
+  WritableSignal,
+} from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LayoutService } from '../services/layout.service';
@@ -12,7 +19,12 @@ import { LayoutService } from '../services/layout.service';
 })
 export class SidenavComponent implements OnInit {
   layoutService = inject(LayoutService);
-  ngOnInit() {}
+  primaryColor: WritableSignal<string> = this.layoutService.primaryColor;
+  // @ViewChild('path', { static: true }) path!: ElementRef<any>;
+  ngOnInit() {
+    // this.path.nativeElement.setAttribute('fill', this.primaryColor);
+    console.log(this.primaryColor());
+  }
 
   onCloseSidenav() {
     this.layoutService.menuOpened.set(false);

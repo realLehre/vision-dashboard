@@ -61,6 +61,15 @@ body {
   color: #fff !important;
 }
 
+.line {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 18, 59, 0) 0%,
+    rgba(224, 225, 226, 1) 50%,
+    rgba(9, 13, 46, 0) 100%
+  );
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

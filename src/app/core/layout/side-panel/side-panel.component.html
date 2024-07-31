@@ -1,5 +1,22 @@
-<div class="h-screen main py-[10px] w-[264px] text-white">
+<div class="h-screen main p-[10px] w-[264px] text-white relative">
   <div
-    class="sidenav h-full w-[95%] mx-auto rounded-[20px] overflow-auto shadow-lg"
-  ></div>
+    class="sidenav h-full w-[95%] mx-auto rounded-[20px] overflow-auto shadow-lg relative px-3 pt-5"
+  >
+    <div class="flex items-center w-full justify-between">
+      <h3>Vision Control Panel</h3>
+
+      <div (click)="onCloseSidePanel()">
+        <i class="fa fa-times text-lg cursor-pointer"></i>
+      </div>
+    </div>
+
+    <div class="w-full h-[1px] line my-5"></div>
+
+    <div class="mt-4">
+      <h4>Change primary color</h4>
+      <form [formGroup]="formGroup">
+        <p-colorPicker formControlName="color" class="w-[24px h-[24px]" />
+      </form>
+    </div>
+  </div>
 </div>
