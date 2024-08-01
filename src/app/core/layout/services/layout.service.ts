@@ -5,13 +5,15 @@ import { ActivatedRoute, Router } from '@angular/router';
   providedIn: 'root',
 })
 export class LayoutService {
-  menuOpened = signal(false);
+  menuOpened = signal(true);
   sidePanelOpened = signal<boolean>(false);
   primaryColor = signal<string>('');
   router = inject(ActivatedRoute);
   currentRoute = signal('');
   constructor() {
-    this.menuOpened.set(JSON.parse(sessionStorage.getItem('menuStatus')!));
+    this.menuOpened.set(
+      JSON.parse(localStorage.getItem('menuStatus')!) ?? true,
+    );
     if (localStorage.getItem('primaryColor')) {
       this.primaryColor.set(localStorage.getItem('primaryColor')!);
     } else {

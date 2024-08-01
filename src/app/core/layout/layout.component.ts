@@ -48,7 +48,7 @@ export class LayoutComponent implements OnInit {
   isMobileToggled: boolean = false;
 
   ngOnInit() {
-    this.onToggleMobile();
+    this.isMenuOpened = this.isMenuOpenedSig();
   }
   @HostListener('window:resize', ['$event'])
   onToggleMobile() {
@@ -65,6 +65,6 @@ export class LayoutComponent implements OnInit {
   onToggleMenu() {
     this.isMenuOpened = !this.isMenuOpened;
     this.isMenuOpenedSig.set(this.isMenuOpened);
-    sessionStorage.setItem('menuStatus', JSON.stringify(this.isMenuOpened));
+    localStorage.setItem('menuStatus', JSON.stringify(this.isMenuOpened));
   }
 }

@@ -19,18 +19,6 @@ import { of } from 'rxjs';
 })
 export class HeaderComponent {
   layoutService = inject(LayoutService);
-  @ViewChild('header', { static: true }) header!: ElementRef;
-
-  @HostListener('window:scroll', ['$event'])
-  handleScroll() {
-    const isScrolled = window.scrollY > 50;
-    if (isScrolled) {
-      this.header.nativeElement.classList.add('add_bg');
-    } else {
-      this.header.nativeElement.classList.remove('add_bg');
-    }
-  }
-
   onOpenMenu() {
     this.layoutService.menuOpened.set(true);
   }
