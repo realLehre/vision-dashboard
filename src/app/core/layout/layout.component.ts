@@ -41,14 +41,14 @@ import { HeaderComponent } from './header/header.component';
 export class LayoutComponent implements OnInit {
   layoutService = inject(LayoutService);
   isMenuOpened: boolean =
-    JSON.parse(sessionStorage.getItem('menuStatus')!) ?? true;
+    JSON.parse(localStorage.getItem('menuStatus')!) ?? true;
   isMenuOpenedSig = this.layoutService.menuOpened;
   @ViewChild('container', { static: true })
   container!: ElementRef<HTMLDivElement>;
   isMobileToggled: boolean = false;
 
   ngOnInit() {
-    this.isMenuOpened = this.isMenuOpenedSig();
+    this.isMenuOpened = JSON.parse(localStorage.getItem('menuStatus')!);
   }
   @HostListener('window:resize', ['$event'])
   onToggleMobile() {
@@ -56,9 +56,7 @@ export class LayoutComponent implements OnInit {
     if (this.isMobileToggled) {
       this.isMenuOpenedSig.set(false);
     } else {
-      this.isMenuOpenedSig.set(
-        JSON.parse(sessionStorage.getItem('menuStatus')!),
-      );
+      this.isMenuOpenedSig.set(JSON.parse(localStorage.getItem('menuStatus')!));
     }
   }
 

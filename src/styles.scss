@@ -61,6 +61,11 @@ body {
   color: #fff !important;
 }
 
+.mat-mdc-row,
+.mdc-data-table__content {
+  padding: 20px 0 !important;
+}
+
 .line {
   background: linear-gradient(
     90deg,

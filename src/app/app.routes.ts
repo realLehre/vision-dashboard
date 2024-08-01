@@ -7,10 +7,16 @@ export const routes: Routes = [
     path: 'dashboard',
     loadComponent: () =>
       import('./features/dashboard/dashboard.component').then(
-        (m) => m.DashboardComponent,
+        (c) => c.DashboardComponent,
       ),
   },
-  { path: 'tables', component: AppComponent },
+  {
+    path: 'tables',
+    loadComponent: () =>
+      import('./features/tables/tables.component').then(
+        (c) => c.TablesComponent,
+      ),
+  },
   { path: 'billing', component: AppComponent },
   { path: 'rtl', component: AppComponent },
   { path: 'profile', component: AppComponent },
