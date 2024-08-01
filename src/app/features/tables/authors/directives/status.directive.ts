@@ -22,7 +22,6 @@ export class AuthorStatusDirective implements OnInit {
   }
 
   styleStatus() {
-    console.log(this.appAuthorStatus);
     if (this.appAuthorStatus?.toLowerCase() === 'online') {
       this.renderer.setStyle(
         this.el.nativeElement,

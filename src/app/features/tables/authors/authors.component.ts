@@ -50,7 +50,6 @@ export class AuthorsComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.authors = new MatTableDataSource<Author>(this.authorService.authors);
-    console.log(this.authors);
   }
 
   ngAfterViewInit() {
