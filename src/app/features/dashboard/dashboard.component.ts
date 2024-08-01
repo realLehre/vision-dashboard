@@ -1,6 +1,7 @@
 import {
   AfterViewInit,
   Component,
+  DoCheck,
   ElementRef,
   HostListener,
   Inject,
