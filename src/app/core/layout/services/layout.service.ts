@@ -10,6 +10,8 @@ export class LayoutService {
   primaryColor = signal<string>('');
   router = inject(ActivatedRoute);
   currentRoute = signal('');
+  mainContentWidth = signal<number>(0);
+
   constructor() {
     this.menuOpened.set(
       JSON.parse(localStorage.getItem('menuStatus')!) ?? true,

@@ -38,18 +38,25 @@ import { HeaderComponent } from './header/header.component';
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, AfterViewInit {
   layoutService = inject(LayoutService);
   isMenuOpened: boolean =
     JSON.parse(localStorage.getItem('menuStatus')!) ?? true;
   isMenuOpenedSig = this.layoutService.menuOpened;
   @ViewChild('container', { static: true })
   container!: ElementRef<HTMLDivElement>;
+  @ViewChild('mainContent', { static: true })
+  mainContent!: ElementRef<HTMLDivElement>;
   isMobileToggled: boolean = false;
 
   ngOnInit() {
     this.isMenuOpened = JSON.parse(localStorage.getItem('menuStatus')!);
   }
+
+  ngAfterViewInit() {
+    this.onResize();
+  }
+
   @HostListener('window:resize', ['$event'])
   onToggleMobile() {
     this.isMobileToggled = this.container.nativeElement.offsetWidth < 550;
@@ -58,11 +65,19 @@ export class LayoutComponent implements OnInit {
     } else {
       this.isMenuOpenedSig.set(JSON.parse(localStorage.getItem('menuStatus')!));
     }
+
+    this.onResize();
   }
 
   onToggleMenu() {
     this.isMenuOpened = !this.isMenuOpened;
     this.isMenuOpenedSig.set(this.isMenuOpened);
     localStorage.setItem('menuStatus', JSON.stringify(this.isMenuOpened));
+  }
+
+  onResize() {
+    this.layoutService.mainContentWidth.set(
+      this.mainContent.nativeElement.offsetWidth,
+    );
   }
 }

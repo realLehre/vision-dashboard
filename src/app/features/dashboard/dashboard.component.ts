@@ -26,19 +26,4 @@ import { SidePanelComponent } from '../../core/layout/side-panel/side-panel.comp
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent implements OnInit {
-  @ViewChild('dashboard', { static: true })
-  dashboardContainer!: ElementRef<HTMLDivElement>;
-  dashboardService = inject(DashboardService);
-
-  ngOnInit() {
-    this.onResize();
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.dashboardService.dashboardWidth.set(
-      this.dashboardContainer.nativeElement.offsetWidth,
-    );
-  }
-}
+export class DashboardComponent {}

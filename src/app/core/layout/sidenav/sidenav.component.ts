@@ -20,7 +20,6 @@ import { DashboardService } from '../../../features/dashboard/services/dashboard
 })
 export class SidenavComponent implements OnInit {
   layoutService = inject(LayoutService);
-  dashboardService = inject(DashboardService);
   primaryColor: WritableSignal<string> = this.layoutService.primaryColor;
   router = inject(Router);
   ngOnInit() {}
@@ -31,7 +30,7 @@ export class SidenavComponent implements OnInit {
 
   onNavigate(route: string) {
     this.router.navigate(['/', route]);
-    if (this.dashboardService.dashboardWidth() < 550) {
+    if (this.layoutService.mainContentWidth() < 550) {
       this.onCloseSidenav();
     }
   }

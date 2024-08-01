@@ -1,4 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { RouterOutlet } from '@angular/router';
 
