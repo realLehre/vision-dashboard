@@ -1,16 +1,9 @@
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  inject,
-  OnInit,
-  ViewChild,
-  WritableSignal,
-} from '@angular/core';
+import { Component, inject, OnInit, WritableSignal } from '@angular/core';
+import { NgClass } from '@angular/common';
+
 import { SalesOverviewComponent } from './sales-overview/sales-overview.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
-import { NgClass } from '@angular/common';
-import { DashboardService } from '../services/dashboard.service';
+import { LayoutService } from '../../../core/layout/services/layout.service';
 
 @Component({
   selector: 'app-charts',
@@ -20,8 +13,8 @@ import { DashboardService } from '../services/dashboard.service';
   styleUrl: './charts.component.scss',
 })
 export class ChartsComponent implements OnInit {
-  dashboardService = inject(DashboardService);
-  containerWidth: WritableSignal<number> = this.dashboardService.dashboardWidth;
+  layoutService = inject(LayoutService);
+  containerWidth: WritableSignal<number> = this.layoutService.mainContentWidth;
 
   ngOnInit() {}
 }

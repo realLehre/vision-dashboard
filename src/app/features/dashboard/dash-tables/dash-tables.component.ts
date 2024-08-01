@@ -1,9 +1,10 @@
 import { Component, inject, WritableSignal } from '@angular/core';
+import { NgClass } from '@angular/common';
+
 import { ProjectsComponent } from './projects/projects.component';
 import { OrdersOverviewComponent } from '../orders-overview/orders-overview.component';
 import { ActiveUsersComponent } from '../charts/active-users/active-users.component';
-import { NgClass } from '@angular/common';
-import { DashboardService } from '../services/dashboard.service';
+import { LayoutService } from '../../../core/layout/services/layout.service';
 
 @Component({
   selector: 'app-dash-tables',
@@ -18,6 +19,6 @@ import { DashboardService } from '../services/dashboard.service';
   styleUrl: './dash-tables.component.scss',
 })
 export class DashTablesComponent {
-  dashboardService = inject(DashboardService);
-  containerWidth: WritableSignal<number> = this.dashboardService.dashboardWidth;
+  layoutService = inject(LayoutService);
+  containerWidth: WritableSignal<number> = this.layoutService.mainContentWidth;
 }
