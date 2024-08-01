@@ -21,11 +21,18 @@ import {
 } from '@angular/material/table';
 import { MatSort, MatSortHeader, MatSortModule } from '@angular/material/sort';
 import { Author, AuthorsService } from './services/authors.service';
+import { AuthorStatusDirective } from './directives/status.directive';
 
 @Component({
   selector: 'app-authors',
   standalone: true,
-  imports: [CurrencyPipe, MatTableModule, MatSortModule, DatePipe],
+  imports: [
+    CurrencyPipe,
+    MatTableModule,
+    MatSortModule,
+    DatePipe,
+    AuthorStatusDirective,
+  ],
   templateUrl: './authors.component.html',
   styleUrl: './authors.component.scss',
 })

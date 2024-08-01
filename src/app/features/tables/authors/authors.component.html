@@ -1,4 +1,4 @@
-<div class="authors rounded-[20px] p-4 min-h-[500px] w-full">
+<div class="authors rounded-[20px] p-4 max-h-[500px] w-full">
   <h3 class="text-lg font-bold">Authors Table</h3>
 
   <div class="mt-2 overflow-auto max-h-[370px]">
@@ -38,29 +38,29 @@
 
       <ng-container matColumnDef="status">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>STATUS</th>
-        <td mat-cell *matCellDef="let row" class="text-sm capitalize">
-          {{ row.status }}
+        <td mat-cell *matCellDef="let row">
+          <div
+            class="text-sm capitalize rounded-lg px-4 py-1 w-[65px] h-[25px] flex items-center justify-center"
+            appAuthorStatus
+            [appAuthorStatus]="row?.status"
+          >
+            {{ row.status }}
+          </div>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="employed">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>EMPLOYED</th>
-        <td
-          mat-cell
-          *matCellDef="let row"
-          class="text-sm capitalize font-normal"
-        >
-          {{ row.employed }}
+        <td mat-cell *matCellDef="let row">
+          <div class="text-sm capitalize font-normal">
+            {{ row.employed }}
+          </div>
         </td>
       </ng-container>
       <ng-container matColumnDef="edit">
         <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
-        <td
-          mat-cell
-          *matCellDef="let row"
-          class="text-sm text-type_gray cursor-pointer"
-        >
-          Edit
+        <td mat-cell *matCellDef="let row">
+          <div class="text-sm text-type_gray cursor-pointer">Edit</div>
         </td>
       </ng-container>
 
