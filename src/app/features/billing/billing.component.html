@@ -1,6 +1,15 @@
 <div class="flex flex-col items-center gap-4 w-full">
-  <div class="flex items-center gap-4 w-full">
-    <app-cards class="w-1/2" />
-    <app-invoices />
+  <div
+    class="flex gap-4 w-full"
+    [ngClass]="{ 'flex-col': containerWidth() < 830 }"
+  >
+    <app-cards
+      class="flex-1 w-4/6"
+      [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
+    />
+    <app-invoices
+      class="w-4/12"
+      [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
+    />
   </div>
 </div>

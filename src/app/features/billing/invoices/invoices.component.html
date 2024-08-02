@@ -1,1 +1,31 @@
-<p>invoices works!</p>
+<div class="invoices rounded-[20px] p-4 w-full h-full">
+  <div class="w-full flex items-center justify-between">
+    <h3 class="text-lg font-bold">Invoices</h3>
+    <button
+      class="bg-pri_blue outline-0 border-0 rounded-[12px] py-2 px-4 text-[10px] font-bold"
+    >
+      VIEW ALL
+    </button>
+  </div>
+
+  <div class="space-y-5 mt-5 w-full">
+    @for (invoice of invoices; track invoice) {
+      <div class="w-full flex items-center justify-between">
+        <div>
+          <div class="text-sm mb-1">
+            {{ invoice.date }}
+          </div>
+          <div class="text-xs text-type_gray">{{ invoice.id }}</div>
+        </div>
+
+        <div class="flex items-center space-x-3 text-type_gray text-xs">
+          <div class="">{{ invoice.amount | currency: "$" }}</div>
+          <div class="flex items-center">
+            <img src="assets/images/billing/pdf.svg" alt="" />
+            <div>PDF</div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
