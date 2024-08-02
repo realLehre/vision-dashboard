@@ -1,0 +1,16 @@
+.balance {
+  background: linear-gradient(
+    130deg,
+    rgba(#060b28, 0.94) 0%,
+    rgba(#0a0e23, 0.49) 100%
+  );
+
+  &-main {
+    background: rgb(34, 41, 78);
+    background: linear-gradient(
+      130deg,
+      rgba(34, 41, 78, 0.9360994397759104) 0%,
+      rgba(10, 14, 35, 0.47951680672268904) 100%
+    );
+  }
+}

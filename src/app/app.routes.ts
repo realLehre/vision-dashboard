@@ -17,7 +17,13 @@ export const routes: Routes = [
         (c) => c.TablesComponent,
       ),
   },
-  { path: 'billing', component: AppComponent },
+  {
+    path: 'billing',
+    loadComponent: () =>
+      import('./features/billing/billing.component').then(
+        (c) => c.BillingComponent,
+      ),
+  },
   { path: 'rtl', component: AppComponent },
   { path: 'profile', component: AppComponent },
   { path: 'sign-in', component: AppComponent },

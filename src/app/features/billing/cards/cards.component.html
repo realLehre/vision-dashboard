@@ -1,0 +1,96 @@
+<div class="space-y-5 w-full">
+  <div class="flex items-center gap-4">
+    <div
+      class="h-[240px] rounded-[20px] w-[55%] relative bg-[url('assets/images/billing/card-bg.png')] bg-no-repeat bg-cover object-contain p-4 overflow-hidden"
+    >
+      <div class="w-full flex flex-col justify-between h-full z-50 relative">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-bold">Vision UI</h2>
+          <img src="assets/images/billing/Circles.png" alt="" />
+        </div>
+
+        <div>
+          <h1 class="text-2xl font-bold mb-2">7812 2139 0823 XXXX</h1>
+          <div class="flex items-center space-x-5">
+            <div>
+              <div class="text-[10px]">VALID THRU</div>
+              <div class="text-sm font-bold">05/24</div>
+            </div>
+            <div>
+              <div class="text-[10px]">CVV</div>
+              <div class="text-sm font-bold">00/X</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[url('assets/images/billing/Texture.png')] bg-no-repeat bg-cover object-contain z-40 h-full w-full absolute top-0 left-0 opacity-30"
+      ></div>
+    </div>
+
+    <div
+      class="h-[240px] rounded-[20px] w-[55%] relative p-4 overflow-hidden balance"
+    >
+      <div class="w-full flex flex-col justify-between h-full z-50 relative">
+        <div
+          class="w-full flex flex-col h-[100px] items-center justify-between balance-main rounded-[20px] p-4 relative overflow-hidden"
+        >
+          <div class="flex items-center justify-between w-full z-50">
+            <h2 class="text-xs">Credit balance</h2>
+            <div
+              class="rotate-90 cursor-pointer w-4 h-4 flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 512"
+                class="w-1 fill-white"
+              >
+                <path
+                  d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between w-full z-50">
+            <div class="text-[34px] font-bold">
+              {{ "25255" | currency: "$" }}
+            </div>
+            <img src="assets/images/billing/wave.png" alt="" />
+          </div>
+
+          <img
+            src="assets/images/billing/Shadow.png"
+            class="absolute right-0 top-0 z-30"
+            alt=""
+          />
+        </div>
+
+        <div>
+          <h4 class="text-[10px] text-type_gray mb-2">NEWEST</h4>
+          <div class="w-full flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-[42px] h-[42px] rounded-full bg-bg_gray flex items-center justify-center"
+              >
+                <img src="assets/images/billing/domain.png" alt="" />
+              </div>
+              <div>
+                <div class="text-sm">Bill & Taxes</div>
+                <div class="text-sm text-type_gray">Today, {{ today }}</div>
+              </div>
+            </div>
+
+            <div class="text-sm font-bold">
+              {{ "-145" | currency: "$" }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <app-payment-method />
+  </div>
+</div>
