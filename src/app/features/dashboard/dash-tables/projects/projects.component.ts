@@ -55,6 +55,13 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     this.projects = new MatTableDataSource<Project>(
       this.projectsService.projects,
     );
+    if (this.layoutService.currentRoute() == 'tables') {
+      this.displayedColumns.push('menu');
+    } else {
+      this.displayedColumns = this.displayedColumns.filter(
+        (col) => col != 'menu',
+      );
+    }
   }
 
   ngAfterViewInit() {

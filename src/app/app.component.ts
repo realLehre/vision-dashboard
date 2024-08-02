@@ -9,6 +9,7 @@ import { LayoutComponent } from './core/layout/layout.component';
 import { SidePanelComponent } from './core/layout/side-panel/side-panel.component';
 import { filter } from 'rxjs';
 import { LayoutService } from './core/layout/services/layout.service';
+import { ScrollService } from './shared/services/scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +19,10 @@ import { LayoutService } from './core/layout/services/layout.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  title = 'vision-dashboard';
   route = inject(ActivatedRoute);
   router = inject(Router);
   layoutService = inject(LayoutService);
+  scrollService = inject(ScrollService);
 
   ngOnInit() {
     this.router.events
@@ -36,13 +37,5 @@ export class AppComponent implements OnInit {
         const routeSnapshot = currentRoute.snapshot;
         this.layoutService.currentRoute.set(routeSnapshot.url[0].path);
       });
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  handleScroll() {
-    console.log(1);
-    const isScrolled = window.scrollY > 50;
-    console.log(window.scrollY);
-    console.log(isScrolled);
   }
 }
