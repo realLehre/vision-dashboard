@@ -1,1 +1,97 @@
-<p>transactions works!</p>
+<div class="generic-bg h-full">
+  <div class="w-full flex items-center justify-between">
+    <h2 class="section-head">Your transactions</h2>
+    <div class="flex items-center space-x-2">
+      <img src="assets/images/billing/calenda.png" alt="" />
+      <div class="sub_text">23 - 30 March 2020</div>
+    </div>
+  </div>
+
+  <div class="w-full mt-4">
+    <h2 class="text-[10px] text-type_gray">NEWEST</h2>
+    <div class="space-y-5 mt-3">
+      @for (transaction of transactions.slice(0, 2); track transactions) {
+        <div class="flex items-center justify-between w-full">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-[35px] h-[35px] rounded-full flex items-center justify-center"
+              appTransactionsIconStatus
+              [appTransactionsIconStatus]="transaction.type"
+            >
+              <img
+                src=""
+                alt=""
+                appTransactionsImgStatus
+                [appTransactionsImgStatus]="transaction.type"
+              />
+            </div>
+            <div>
+              <div class="text-sm font-medium">{{ transaction.title }}</div>
+              <div class="text-sm font-normal">{{ transaction.date }}</div>
+            </div>
+          </div>
+
+          <div
+            appTransactionsStatus
+            [appTransactionsStatus]="transaction.type"
+            class="text-sm"
+          >
+            @if (transaction.type == "credit") {
+              +
+            } @else if (transaction.type == "debit") {
+              -
+            }
+            ${{
+              transaction.price == 0 ? "Pending" : (transaction.price | number)
+            }}
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="w-full mt-4">
+    <h2 class="text-[10px] text-type_gray">YESTERDAY</h2>
+    <div class="space-y-5 mt-3">
+      @for (transaction of transactions.slice(2); track transactions) {
+        <div class="flex items-center justify-between w-full">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-[35px] h-[35px] rounded-full flex items-center justify-center"
+              appTransactionsIconStatus
+              [appTransactionsIconStatus]="transaction.type"
+            >
+              <img
+                src=""
+                alt=""
+                appTransactionsImgStatus
+                [appTransactionsImgStatus]="transaction.type"
+              />
+            </div>
+            <div>
+              <div class="text-sm font-medium">{{ transaction.title }}</div>
+              <div class="text-sm font-normal">{{ transaction.date }}</div>
+            </div>
+          </div>
+
+          <div
+            appTransactionsStatus
+            [appTransactionsStatus]="transaction.type"
+            class="text-sm"
+          >
+            @if (transaction.type == "credit") {
+              +
+            } @else if (transaction.type == "debit") {
+              -
+            }
+            {{
+              transaction.price == 0
+                ? "Pending"
+                : "$" + (transaction.price | number)
+            }}
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

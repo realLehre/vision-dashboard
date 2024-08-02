@@ -19,6 +19,5 @@ export class CardsComponent {
       min = '0' + min;
     }
     this.today = `${hour}:${min}`;
-    console.log(this.today);
   }
 }

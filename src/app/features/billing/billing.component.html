@@ -4,11 +4,25 @@
     [ngClass]="{ 'flex-col': containerWidth() < 830 }"
   >
     <app-cards
-      class="flex-1 w-4/6"
+      class="flex-1 w-3/5"
       [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
     />
     <app-invoices
-      class="w-4/12"
+      class="w-2/5"
+      [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
+    />
+  </div>
+
+  <div
+    class="flex gap-4 w-full"
+    [ngClass]="{ 'flex-col': containerWidth() < 830 }"
+  >
+    <app-billing-info
+      class="flex-1 w-3/5"
+      [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
+    />
+    <app-transactions
+      class="w-2/5"
       [ngClass]="{ 'min-w-full': containerWidth() < 830 }"
     />
   </div>
