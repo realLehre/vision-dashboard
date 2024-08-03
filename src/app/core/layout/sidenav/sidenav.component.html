@@ -13,8 +13,9 @@
             VISION UI FREE
           </div>
           <div
-            class="p-2 rounded-[5px] bg-pri_blue w-[25px] h-[25px] flex items-center justify-center min-[550px]:hidden"
+            class="p-2 rounded-[5px] w-[25px] h-[25px] flex items-center justify-center min-[550px]:hidden"
             (click)="onCloseSidenav()"
+            [style.background-color]="layoutService.primaryColor()"
           >
             <i class="fa fa-times text-xl"></i>
           </div>
