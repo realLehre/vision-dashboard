@@ -24,8 +24,18 @@ export const routes: Routes = [
         (c) => c.BillingComponent,
       ),
   },
-  { path: 'rtl', component: AppComponent },
-  { path: 'profile', component: AppComponent },
+  // {
+  //   path: 'rtl',
+  //   loadComponent: () =>
+  //     import('./features/rtl/rtl.component').then((c) => c.RtlComponent),
+  // },
+  {
+    path: 'profile',
+    loadComponent: () =>
+      import('./features/profile/profile.component').then(
+        (c) => c.ProfileComponent,
+      ),
+  },
   { path: 'sign-in', component: AppComponent },
   { path: 'sign-up', component: AppComponent },
 ];

@@ -1,0 +1,112 @@
+<div class="generic-bg">
+  <div>
+    <h3 class="section-head">Car Information</h3>
+    <div class="text-sm">Hello, Mark Johnson! Your Car is ready.</div>
+  </div>
+
+  <div class="mt-4 flex items-center space-x-3">
+    <div class="flex flex-col justify-center">
+      <div
+        class="relative bg-primary rounded-full w-[168px] h-[168px] flex items-center justify-center"
+      >
+        <circle-progress
+          [percent]="safetyScore"
+          [radius]="75"
+          [showTitle]="false"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [outerStrokeWidth]="12"
+          [clockwise]="false"
+          [outerStrokeColor]="'#05CD99'"
+          [outerStrokeGradientStopColor]="test"
+          [outerStrokeGradient]="true"
+          [animation]="true"
+          [animationDuration]="300"
+          [showInnerStroke]="false"
+        ></circle-progress>
+        <div
+          class="flex flex-col items-center justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
+        >
+          <div class="sub_text">
+            <img src="assets/images/profile/charge.svg" alt="" />
+          </div>
+          <div class="text-[36px] font-bold leading-tight">
+            {{ safetyScore }}%
+          </div>
+          <div class="sub_text text-xs">Current load</div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <div class="font-bold">0h 58min</div>
+        <div class="text-sm text-type_gray">Time to full charge</div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <div
+          class="flex items-center justify-between space-x-2 car-info rounded-[20px] p-3"
+        >
+          <div class="">
+            <div class="text-xs text-type_gray">Battery Health</div>
+            <div class="text-[22px] font-bold">72%</div>
+          </div>
+          <div
+            class="rounded-lg w-[40px] h-[40px] flex items-center justify-center"
+            [style.background-color]="layoutService.primaryColor()"
+          >
+            <img src="assets/images/profile/battery-health.png" alt="" />
+          </div>
+        </div>
+
+        <div
+          class="flex items-center justify-between space-x-2 car-info rounded-[20px] p-3"
+        >
+          <div class="">
+            <div class="text-xs text-type_gray">Efficiency</div>
+            <div class="text-[22px] font-bold">+20%</div>
+          </div>
+          <div
+            class="rounded-lg w-[40px] h-[40px] flex items-center justify-center"
+            [style.background-color]="layoutService.primaryColor()"
+          >
+            <img src="assets/images/profile/battery-health.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <div
+          class="flex items-center justify-between space-x-2 car-info rounded-[20px] p-3"
+        >
+          <div class="">
+            <div class="text-xs text-type_gray">Consumption</div>
+            <div class="text-[22px] font-bold">163W/km</div>
+          </div>
+          <div
+            class="rounded-lg w-[40px] h-[40px] flex items-center justify-center"
+            [style.background-color]="layoutService.primaryColor()"
+          >
+            <img src="assets/images/profile/charge-white.svg" alt="" />
+          </div>
+        </div>
+
+        <div
+          class="flex items-center justify-between space-x-2 car-info rounded-[20px] p-3"
+        >
+          <div class="">
+            <div class="text-xs text-type_gray">This week</div>
+            <div class="text-[22px] font-bold">1.342km</div>
+          </div>
+          <div
+            class="rounded-lg w-[40px] h-[40px] flex items-center justify-center"
+            [style.background-color]="layoutService.primaryColor()"
+          >
+            <img src="assets/images/profile/battery-health.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

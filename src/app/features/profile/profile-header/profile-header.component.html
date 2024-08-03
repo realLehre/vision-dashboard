@@ -1,0 +1,51 @@
+<div
+  class="w-full flex items-center justify-between flex-wrap gap-4 rounded-[20px] p-4 profile-header"
+>
+  <div class="flex items-center space-x-4">
+    <div class="w-[80px] h-[80px] relative">
+      <div class="h-full overflow-hidden rounded-xl">
+        <img
+          src="assets/images/profile/profile-pic.png"
+          alt=""
+          class="w-full"
+        />
+      </div>
+      <div
+        class="edit w-[26px] h-[26px] rounded-lg flex items-center justify-center cursor-pointer absolute -bottom-2 -right-2"
+      >
+        <img src="assets/images/billing/edit.svg" alt="" />
+      </div>
+    </div>
+
+    <div>
+      <div class="section-head">Mark Johnson</div>
+      <div class="sub_text">mark&#64;simmmmple.com</div>
+    </div>
+  </div>
+
+  <div
+    class="flex items-center flex-wrap gap-3 max-[400px]:justify-between max-[400px]:w-full"
+  >
+    <button
+      class="outline-0 border-0 rounded-[12px] py-2 px-4 text-[10px] font-bold flex items-center justify-center space-x-1 w-[100px] max-[400px]:w-[80px]"
+      [style.background-color]="layoutService.primaryColor()"
+    >
+      <img src="assets/images/profile/overview.png" alt="" />
+      <span>Overview</span>
+    </button>
+    <button
+      class="outline-0 border-0 rounded-[12px] py-2 px-4 text-[10px] font-bold flex items-center justify-center space-x-1 w-[100px] max-[400px]:w-[80px]"
+      appHover
+    >
+      <img src="assets/images/profile/teams.png" alt="" />
+      <span>Teams</span>
+    </button>
+    <button
+      class="outline-0 border-0 rounded-[12px] py-2 px-4 text-[10px] font-bold flex items-center justify-center space-x-1 w-[100px] max-[400px]:w-[80px]"
+      appHover
+    >
+      <img src="assets/images/profile/projects.png" alt="" />
+      <span>Projects</span>
+    </button>
+  </div>
+</div>

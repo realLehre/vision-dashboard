@@ -1,0 +1,41 @@
+<div class="generic-bg w-full">
+  <h2 class="section-head">Projects</h2>
+  <div class="sub_text">Architects design houses</div>
+
+  <div class="mt-5 projects w-full">
+    @for (project of projects; track projects; let i = $index) {
+      <div class="min-w-[260px]">
+        <div class="rounded-lg overflow-hidden w-full">
+          <img [src]="project.img" alt="" class="w-full" />
+        </div>
+
+        <div class="mt-4">
+          <div class="text-[10px] text-type_gray">Project #{{ i + 1 }}</div>
+          <div class="text-lg font-bold">{{ project.title }}</div>
+          <div class="mt-2 mb-4 sub_text">
+            {{ project.text }}
+          </div>
+
+          <div class="flex items-center justify-between">
+            <button
+              class="outline-0 border-[1px] border-white rounded-[12px] py-2 px-6 text-[10px] font-bold"
+            >
+              VIEW ALL
+            </button>
+
+            <div class="flex items-center">
+              @for (img of imgs; track img; let i = $index) {
+                <img
+                  [src]="img"
+                  alt=""
+                  class="rounded-full w-[20px] h-[20px] min-w-[20px] min-h-[20px]"
+                  [ngClass]="{ '-ml-[8px]': i > 0 }"
+                />
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

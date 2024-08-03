@@ -1,0 +1,43 @@
+<div class="generic-bg">
+  <h2 class="section-head">Platform Settings</h2>
+
+  <div class="mt-5 space-y-4">
+    <div class="text-[10px] text-type_gray">ACCOUNT</div>
+    <div class="space-y-3">
+      <div class="flex items-center space-x-4">
+        <app-toggle-btn [toggle]="true" />
+        <div>Email me when someone follows me</div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <app-toggle-btn />
+        <div>Email me when someone answers to...</div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <app-toggle-btn [toggle]="true" />
+        <div>Email me when someone mentions me</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-9 space-y-4">
+    <div class="text-[10px] text-type_gray">APPLICATION</div>
+    <div class="space-y-3">
+      <div class="flex items-center space-x-4">
+        <app-toggle-btn />
+        <div>New launches and projects</div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <app-toggle-btn />
+        <div>Monthly product updates</div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <app-toggle-btn [toggle]="true" />
+        <div>Subscribe to newsletter</div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <app-toggle-btn [toggle]="true" />
+        <div>Receive mails weekly</div>
+      </div>
+    </div>
+  </div>
+</div>
