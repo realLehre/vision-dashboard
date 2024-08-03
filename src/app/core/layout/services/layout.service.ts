@@ -1,4 +1,4 @@
-import { inject, Injectable, signal } from '@angular/core';
+import { HostListener, inject, Injectable, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable({
@@ -13,13 +13,23 @@ export class LayoutService {
   mainContentWidth = signal<number>(0);
 
   constructor() {
-    this.menuOpened.set(
-      JSON.parse(localStorage.getItem('menuStatus')!) ?? true,
-    );
+    this.onToggleMobile();
+
     if (localStorage.getItem('primaryColor')) {
       this.primaryColor.set(localStorage.getItem('primaryColor')!);
     } else {
       this.primaryColor.set('#0075FF');
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onToggleMobile() {
+    if (window.innerWidth < 550) {
+      this.menuOpened.set(false);
+    } else {
+      this.menuOpened.set(
+        JSON.parse(localStorage.getItem('menuStatus')!) ?? true,
+      );
     }
   }
 }
