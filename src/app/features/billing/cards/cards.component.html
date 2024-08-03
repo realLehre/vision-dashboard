@@ -1,7 +1,7 @@
 <div class="space-y-5 w-full">
-  <div class="flex items-center gap-4">
+  <div class="flex items-center gap-4 flex-wrap">
     <div
-      class="h-[240px] rounded-[20px] w-[55%] relative bg-[url('assets/images/billing/card-bg.png')] bg-no-repeat bg-cover object-contain p-4 overflow-hidden"
+      class="h-[240px] rounded-[20px] flex-1 min-w-[280px] relative bg-[url('assets/images/billing/card-bg.png')] bg-no-repeat bg-cover object-contain p-4 overflow-hidden"
     >
       <div class="w-full flex flex-col justify-between h-full z-50 relative">
         <div class="flex items-center justify-between">
@@ -29,7 +29,7 @@
     </div>
 
     <div
-      class="h-[240px] rounded-[20px] w-[55%] relative p-4 overflow-hidden balance"
+      class="h-[240px] rounded-[20px] flex-1 relative p-4 overflow-hidden balance min-w-[280px]"
     >
       <div class="w-full flex flex-col justify-between h-full z-50 relative">
         <div
@@ -52,7 +52,7 @@
             </div>
           </div>
 
-          <div class="flex items-center justify-between w-full z-50">
+          <div class="flex items-center justify-between space-x-2 w-full z-50">
             <div class="text-[34px] font-bold">
               {{ "25255" | currency: "$" }}
             </div>

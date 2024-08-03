@@ -1,5 +1,5 @@
 <div class="generic-bg h-full">
-  <div class="w-full flex items-center justify-between">
+  <div class="w-full flex items-center gap-2 justify-between flex-wrap">
     <h2 class="section-head">Your transactions</h2>
     <div class="flex items-center space-x-2">
       <img src="assets/images/billing/calenda.png" alt="" />
@@ -11,10 +11,10 @@
     <h2 class="text-[10px] text-type_gray">NEWEST</h2>
     <div class="space-y-5 mt-3">
       @for (transaction of transactions.slice(0, 2); track transactions) {
-        <div class="flex items-center justify-between w-full">
+        <div class="flex items-center space-x-2 justify-between w-full">
           <div class="flex items-center space-x-3">
             <div
-              class="w-[35px] h-[35px] rounded-full flex items-center justify-center"
+              class="min-w-[35px] min-h-[35px] rounded-full flex items-center justify-center"
               appTransactionsIconStatus
               [appTransactionsIconStatus]="transaction.type"
             >
@@ -54,10 +54,10 @@
     <h2 class="text-[10px] text-type_gray">YESTERDAY</h2>
     <div class="space-y-5 mt-3">
       @for (transaction of transactions.slice(2); track transactions) {
-        <div class="flex items-center justify-between w-full">
+        <div class="flex items-center justify-between space-x-2 w-full">
           <div class="flex items-center space-x-3">
             <div
-              class="w-[35px] h-[35px] rounded-full flex items-center justify-center"
+              class="min-w-[35px] min-h-[35px] rounded-full flex items-center justify-center"
               appTransactionsIconStatus
               [appTransactionsIconStatus]="transaction.type"
             >
