@@ -1,10 +1,10 @@
-<div class="generic-bg">
+<div class="generic-bg h-full">
   <div>
     <h3 class="section-head">Car Information</h3>
     <div class="text-sm">Hello, Mark Johnson! Your Car is ready.</div>
   </div>
 
-  <div class="mt-4 flex items-center space-x-3">
+  <div class="mt-4 flex items-center justify-center flex-wrap gap-3 w-full">
     <div class="flex flex-col justify-center">
       <div
         class="relative bg-primary rounded-full w-[168px] h-[168px] flex items-center justify-center"
@@ -43,10 +43,18 @@
       </div>
     </div>
 
-    <div class="space-y-4">
-      <div class="flex items-center space-x-3">
+    <div
+      class="space-y-4 flex-1 min-w-[360px]"
+      [style.min-width]="
+        layoutService.mainContentWidth() < 429 ? '100%' : '360px'
+      "
+    >
+      <div class="flex items-center flex-wrap gap-3">
         <div
           class="flex items-center justify-between space-x-2 car-info rounded-[20px] p-3"
+          [style.min-width]="
+            layoutService.mainContentWidth() < 429 ? '100%' : '175px'
+          "
         >
           <div class="">
             <div class="text-xs text-type_gray">Battery Health</div>
@@ -62,6 +70,9 @@
 
         <div
           class="flex items-center justify-between space-x-2 car-info rounded-[20px] p-3"
+          [style.min-width]="
+            layoutService.mainContentWidth() < 429 ? '100%' : '175px'
+          "
         >
           <div class="">
             <div class="text-xs text-type_gray">Efficiency</div>
@@ -76,9 +87,12 @@
         </div>
       </div>
 
-      <div class="flex items-center space-x-3">
+      <div class="flex items-center flex-wrap gap-3">
         <div
           class="flex items-center justify-between space-x-2 car-info rounded-[20px] p-3"
+          [style.min-width]="
+            layoutService.mainContentWidth() < 429 ? '100%' : '175px'
+          "
         >
           <div class="">
             <div class="text-xs text-type_gray">Consumption</div>
@@ -94,6 +108,9 @@
 
         <div
           class="flex items-center justify-between space-x-2 car-info rounded-[20px] p-3"
+          [style.min-width]="
+            layoutService.mainContentWidth() < 429 ? '100%' : '175px'
+          "
         >
           <div class="">
             <div class="text-xs text-type_gray">This week</div>

@@ -1,9 +1,11 @@
 <div class="w-full space-y-4">
   <app-profile-header />
-  <div class="w-full flex items-start gap-4">
-    <app-profile-welcome />
-    <app-profile-car-info />
-    <app-profile-info />
+  <div class="w-full flex flex-wrap gap-4">
+    <app-profile-welcome class="w-[20%] min-h-[120px] min-w-[170px] flex-1" />
+    <app-profile-car-info
+      class="w-[50%] min-w-[506px] flex-1 max-[830px]:min-w-full"
+    />
+    <app-profile-info class="w-[30%] flex-1" />
   </div>
 
   <div class="flex items-start gap-4">
