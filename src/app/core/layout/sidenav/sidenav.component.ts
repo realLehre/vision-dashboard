@@ -29,7 +29,7 @@ export class SidenavComponent implements OnInit {
   }
 
   onNavigate(route: string) {
-    this.router.navigate(['/', route]);
+    this.router.navigate(['/', 'vision', route]);
     if (this.layoutService.mainContentWidth() < 550) {
       this.onCloseSidenav();
     }
