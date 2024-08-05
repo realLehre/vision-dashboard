@@ -1,0 +1,72 @@
+.header {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid #fff;
+
+  & .dashboard-name {
+    background: linear-gradient(
+      58deg,
+      #ffffff 50%,
+      rgba(117, 122, 140, 0) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.main-text {
+  background: -webkit-linear-gradient(-15deg, #ffffff 70%, #21242f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  background: linear-gradient(
+    104deg,
+    rgba(15, 18, 59, 1) 0%,
+    rgba(9, 13, 46, 1) 59%,
+    rgba(2, 5, 21, 1) 100%
+  );
+}
+
+.gradiant-border {
+  background:
+    linear-gradient(#0c1033, #141638) padding-box,
+    radial-gradient(rgba(#151515, 1), rgba(#151515, 0)),
+    radial-gradient(rgba(#582cff, 1), rgba(#582cff, 0)),
+    radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+    border-box;
+
+  border: 2px solid transparent;
+}
+
+.input-el {
+  background:
+    linear-gradient(#0c1033, #141638) padding-box,
+    radial-gradient(rgba(#151515, 1), rgba(#151515, 0)),
+    radial-gradient(rgba(#582cff, 1), rgba(#582cff, 0)),
+    radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+    border-box;
+
+  border-radius: 20px;
+  border: 2px solid transparent;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  width: 100%;
+
+  &:active {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}

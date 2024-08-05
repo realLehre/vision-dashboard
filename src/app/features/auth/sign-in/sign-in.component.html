@@ -1,4 +1,38 @@
-<div class="flex items-start h-screen overflow-hidden">
+<div class="flex items-start h-screen overflow-hidden relative">
+  <div
+    class="absolute top-4 left-[49%] -translate-x-1/2 rounded-20px px-4 py-5 header z-30 w-[60%] flex items-center justify-between flex-wrap gap-3 max-[378px]:justify-center max-[850px]:w-[90%]"
+  >
+    <div
+      class="tracking-wide dashboard-name font-medium text-sm text-center cursor-pointer"
+      [routerLink]="['/', 'vision', 'dashboard']"
+    >
+      VISION UI FREE
+    </div>
+
+    <div class="flex items-center space-x-5 text-white font-bold text-[10px]">
+      <div
+        class="flex items-center space-x-1 cursor-pointer"
+        [routerLink]="['/', 'vision', 'dashboard']"
+      >
+        <img src="assets/images/auth/dash.png" alt="" />
+        <div>Dashboard</div>
+      </div>
+      <div
+        class="flex items-center space-x-1 cursor-pointer"
+        [routerLink]="['/', 'vision', 'profile']"
+      >
+        <img src="assets/images/auth/profile.png" alt="" />
+        <div>Profile</div>
+      </div>
+      <div
+        class="flex items-center space-x-1 cursor-pointer"
+        [routerLink]="['/', 'vision', 'sign-up']"
+      >
+        <img src="assets/images/auth/sign-up.png" alt="" />
+        <div>Sign up</div>
+      </div>
+    </div>
+  </div>
   <div
     class="sticky h-screen w-1/2 overflow-hidden bg-[url('assets/images/auth/auth-bg.png')] bg-no-repeat bg-cover object-contain flex items-center justify-center flex-col text-white px-3 text-center max-[750px]:hidden"
   >
@@ -16,13 +50,18 @@
       </div>
 
       <div>
-        <form class="space-y-4 block">
+        <form
+          class="space-y-4 block"
+          [formGroup]="form"
+          (ngSubmit)="onSignIn()"
+        >
           <div>
             <label for="email" class="text-sm block mb-1 pl-1">Email</label>
             <input
               id="email"
               placeholder="Your email address"
               class="input-el text-type_gray"
+              formControlName="email"
             />
           </div>
 
@@ -34,6 +73,7 @@
               id="password"
               placeholder="Your password"
               class="input-el text-type_gray"
+              formControlName="password"
             />
           </div>
 
@@ -55,7 +95,11 @@
 
         <div class="sub_text text-center mt-4 no-acc">
           Don't have an account?
-          <a class="text-white font-bold cursor-pointer">Sign up</a>
+          <a
+            class="text-white font-bold cursor-pointer"
+            [routerLink]="['/', 'vision', 'sign-up']"
+            >Sign up</a
+          >
         </div>
       </div>
     </div>
