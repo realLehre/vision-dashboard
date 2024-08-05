@@ -78,11 +78,8 @@
             <div class="text-xs text-type_gray">Efficiency</div>
             <div class="text-[22px] font-bold">+20%</div>
           </div>
-          <div
-            class="rounded-lg w-[40px] h-[40px] flex items-center justify-center"
-            [style.background-color]="layoutService.primaryColor()"
-          >
-            <img src="assets/images/profile/battery-health.png" alt="" />
+          <div class="h-[40px] w-[70%] flex items-center justify-center">
+            <app-profile-chart [name]="'Efficiency'" />
           </div>
         </div>
       </div>
@@ -116,11 +113,8 @@
             <div class="text-xs text-type_gray">This week</div>
             <div class="text-[22px] font-bold">1.342km</div>
           </div>
-          <div
-            class="rounded-lg w-[40px] h-[40px] flex items-center justify-center"
-            [style.background-color]="layoutService.primaryColor()"
-          >
-            <img src="assets/images/profile/battery-health.png" alt="" />
+          <div class="h-[40px] w-[70%] flex items-center justify-center">
+            <app-profile-chart [name]="'This week'" />
           </div>
         </div>
       </div>

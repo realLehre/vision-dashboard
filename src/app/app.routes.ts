@@ -3,34 +3,35 @@ import { AppComponent } from './app.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'vision/dashboard', pathMatch: 'full' },
+  { path: 'vision', redirectTo: 'vision/dashboard', pathMatch: 'full' },
   {
-    path: 'vision',
+    path: '',
     loadComponent: () =>
       import('./core/layout/layout.component').then((c) => c.LayoutComponent),
     children: [
       {
-        path: 'dashboard',
+        path: 'vision/dashboard',
         loadComponent: () =>
           import('./features/dashboard/dashboard.component').then(
             (c) => c.DashboardComponent,
           ),
       },
       {
-        path: 'tables',
+        path: 'vision/tables',
         loadComponent: () =>
           import('./features/tables/tables.component').then(
             (c) => c.TablesComponent,
           ),
       },
       {
-        path: 'billing',
+        path: 'vision/billing',
         loadComponent: () =>
           import('./features/billing/billing.component').then(
             (c) => c.BillingComponent,
           ),
       },
       {
-        path: 'profile',
+        path: 'vision/profile',
         loadComponent: () =>
           import('./features/profile/profile.component').then(
             (c) => c.ProfileComponent,
