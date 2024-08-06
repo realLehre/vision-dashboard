@@ -25,7 +25,10 @@
         />
       </div>
 
-      <div class="flex items-center cursor-pointer whitespace-nowrap">
+      <div
+        class="flex items-center cursor-pointer whitespace-nowrap"
+        [routerLink]="['/', 'vision', 'sign-in']"
+      >
         <img src="assets/images/icons/user.png" class="min-w-[19px]" />
         <div class="text-xs text-type_gray ml-1 max-[400px]:hidden">
           Sign in
