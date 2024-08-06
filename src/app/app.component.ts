@@ -1,4 +1,10 @@
-import { Component, HostListener, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  OnInit,
+  Renderer2,
+} from '@angular/core';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -9,7 +15,6 @@ import { LayoutComponent } from './core/layout/layout.component';
 import { SidePanelComponent } from './core/layout/side-panel/side-panel.component';
 import { filter } from 'rxjs';
 import { LayoutService } from './core/layout/services/layout.service';
-import { ScrollService } from './shared/services/scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +27,8 @@ export class AppComponent implements OnInit {
   route = inject(ActivatedRoute);
   router = inject(Router);
   layoutService = inject(LayoutService);
-  scrollService = inject(ScrollService);
+  renderer = inject(Renderer2);
+  elementRef = inject(ElementRef);
 
   ngOnInit() {
     this.router.events
@@ -33,9 +39,17 @@ export class AppComponent implements OnInit {
         while (currentRoute.firstChild) {
           currentRoute = currentRoute.firstChild;
         }
+        this.scrollTop();
         // Get the route snapshot URL
         const routeSnapshot = currentRoute.snapshot;
         this.layoutService.currentRoute.set(routeSnapshot.url[1].path);
       });
+  }
+
+  scrollTop() {
+    const matDrawerContent = this.elementRef.nativeElement.querySelector(
+      '.mat-drawer-content',
+    );
+    this.renderer.setProperty(matDrawerContent, 'scrollTop', 0);
   }
 }

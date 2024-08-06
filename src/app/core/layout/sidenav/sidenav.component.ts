@@ -1,15 +1,7 @@
-import {
-  Component,
-  ElementRef,
-  inject,
-  OnInit,
-  ViewChild,
-  WritableSignal,
-} from '@angular/core';
+import { Component, inject, OnInit, WritableSignal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LayoutService } from '../services/layout.service';
-import { DashboardService } from '../../../features/dashboard/services/dashboard.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -29,6 +21,7 @@ export class SidenavComponent implements OnInit {
   }
 
   onNavigate(route: string) {
+    this.layoutService.routeInitiated.set(true);
     this.router.navigate(['/', 'vision', route]);
     if (this.layoutService.mainContentWidth() < 550) {
       this.onCloseSidenav();

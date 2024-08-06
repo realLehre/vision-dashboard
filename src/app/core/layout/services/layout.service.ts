@@ -11,6 +11,7 @@ export class LayoutService {
   router = inject(ActivatedRoute);
   currentRoute = signal('');
   mainContentWidth = signal<number>(0);
+  routeInitiated = signal<boolean>(false);
 
   constructor() {
     this.onToggleMobile();

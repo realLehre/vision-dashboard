@@ -1,14 +1,11 @@
 import {
-  AfterViewChecked,
   AfterViewInit,
   Component,
   ElementRef,
   HostListener,
   inject,
   OnInit,
-  Signal,
   ViewChild,
-  WritableSignal,
 } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -16,9 +13,6 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgClass, NgStyle } from '@angular/common';
 import { LayoutService } from './services/layout.service';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { of } from 'rxjs';
-import { DashboardService } from '../../features/dashboard/services/dashboard.service';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { HeaderComponent } from './header/header.component';
 
