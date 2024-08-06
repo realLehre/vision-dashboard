@@ -35,8 +35,7 @@ export class AppComponent implements OnInit {
         }
         // Get the route snapshot URL
         const routeSnapshot = currentRoute.snapshot;
-        this.layoutService.currentRoute.set(routeSnapshot.url[0].path);
-        console.log(routeSnapshot.url[0].path);
+        this.layoutService.currentRoute.set(routeSnapshot.url[1].path);
       });
   }
 }

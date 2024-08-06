@@ -50,7 +50,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
   isMobileToggled: boolean = false;
 
   ngOnInit() {
-    this.isMenuOpened = JSON.parse(localStorage.getItem('menuStatus')!);
+    this.isMenuOpened = JSON.parse(localStorage.getItem('menuStatus')!) ?? true;
   }
 
   ngAfterViewInit() {
@@ -62,8 +62,11 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     this.isMobileToggled = this.container.nativeElement.offsetWidth < 550;
     if (this.isMobileToggled) {
       this.isMenuOpenedSig.set(false);
+      this.isMenuOpened = false;
     } else {
-      this.isMenuOpenedSig.set(JSON.parse(localStorage.getItem('menuStatus')!));
+      const isOpened = JSON.parse(localStorage.getItem('menuStatus')!) ?? true;
+      this.isMenuOpenedSig.set(isOpened);
+      this.isMenuOpened = isOpened;
     }
 
     this.onResize();
