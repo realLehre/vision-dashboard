@@ -98,6 +98,26 @@ body {
   border-radius: 20px;
 }
 
+.my-table {
+  & th {
+    height: 40px !important;
+  }
+}
+
+.mat-mdc-header-cell.my-th {
+  padding-left: 0 !important;
+}
+
+.mat-sort-header-container {
+  margin-bottom: -20px !important;
+}
+
+.my-td {
+  padding-left: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

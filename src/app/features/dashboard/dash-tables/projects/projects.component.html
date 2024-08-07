@@ -33,8 +33,10 @@
         class="bg-transparent my-table h-full overflow-y-scroll"
       >
         <ng-container matColumnDef="companies">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>COMPANIES</th>
-          <td mat-cell *matCellDef="let row">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="my-th">
+            COMPANIES
+          </th>
+          <td mat-cell *matCellDef="let row" class="my-td">
             <div class="flex items-center space-x-4">
               <span
                 ><img [src]="row.logo" class="min-w-[20px] min-h-[20px]"
