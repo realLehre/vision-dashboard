@@ -77,4 +77,8 @@ export class LayoutComponent implements OnInit, AfterViewInit {
       this.mainContent.nativeElement.offsetWidth,
     );
   }
+
+  onOpenSidePanel() {
+    this.layoutService.sidePanelOpened.set(true);
+  }
 }
