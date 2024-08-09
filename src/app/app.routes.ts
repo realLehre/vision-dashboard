@@ -14,6 +14,7 @@ export const routes: Routes = [
           import('./features/dashboard/dashboard.component').then(
             (c) => c.DashboardComponent,
           ),
+        data: { animation: 'dashboard' },
       },
       {
         path: 'vision/tables',
@@ -21,6 +22,7 @@ export const routes: Routes = [
           import('./features/tables/tables.component').then(
             (c) => c.TablesComponent,
           ),
+        data: { animation: 'tables' },
       },
       {
         path: 'vision/billing',
@@ -28,6 +30,7 @@ export const routes: Routes = [
           import('./features/billing/billing.component').then(
             (c) => c.BillingComponent,
           ),
+        data: { animation: 'billing' },
       },
       {
         path: 'vision/profile',
@@ -35,6 +38,7 @@ export const routes: Routes = [
           import('./features/profile/profile.component').then(
             (c) => c.ProfileComponent,
           ),
+        data: { animation: 'profile' },
       },
     ],
   },

@@ -110,13 +110,40 @@ body {
 
 .mat-sort-header-container {
   margin-bottom: -20px !important;
-  //margin-top: -10px !important;
 }
 
 .my-td {
   padding-left: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+}
+
+@keyframes enter {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes exit {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.6);
+  }
+}
+
+::view-transition-old(root) {
+  animation: exit 2s ease 0s 1 normal forwards;
+}
+
+::view-transition-new(root) {
+  animation: enter 3s ease 0s 1 normal forwards;
 }
 
 ::-webkit-scrollbar {
